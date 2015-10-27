@@ -1,9 +1,9 @@
-package src;
+package MATE;
 
 //imports
 import net.java.games.input.*;
 
-public class Main{
+public class main{
     
     public static void main(String[] args) {
          Controller[] ca = ControllerEnvironment.getDefaultEnvironment().getControllers();
