@@ -1,19 +1,9 @@
 package Util;
 
 import java.io.File;
-import Util.var.*;
-import static Util.var.colorBackground;
-import static Util.var.colorBarBackground;
-import static Util.var.colorBarInfo;
-import static Util.var.colorButton;
-import static Util.var.colorButtonHover;
-import static Util.var.colorButtonSelected;
-import static Util.var.colorDebugBackground;
-import static Util.var.colorDebugText;
-import static Util.var.colorMotorBackground;
-import static Util.var.colorPalette;
-import static Util.var.colorText;
-import static Util.var.colorTitleBackground;
+
+import static Util.var.*;
+import java.awt.Color;
 import java.util.ArrayList;
 
 public class color {
@@ -34,25 +24,23 @@ public class color {
     }
     
     public static void colorSet(){
-        for(int i = 0; i < 3; i++) { //loop 3 times for rgb
-  
-            colorText[i] = colorPalette[3][0][i];
+        colorText = new Color(colorPalette[3][0][0], colorPalette[3][0][1], colorPalette[3][0][2]);
 
-            colorBackground[i] = colorPalette[0][0][i];
+        colorBackground = new Color(colorPalette[0][0][0], colorPalette[0][0][1], colorPalette[0][0][2]);
 
-            colorTitleBackground[i] = colorPalette[0][1][i];
+        colorTitleBackground = new Color(colorPalette[0][1][0], colorPalette[0][1][1], colorPalette[0][1][2]);
 
-            colorMotorBackground[i] = colorPalette[0][2][i];
+        colorMotorBackground = new Color(colorPalette[0][2][0], colorPalette[0][2][1], colorPalette[0][2][2]);
 
-            colorBarBackground[i] = colorPalette[1][2][i];
-            colorBarInfo[i] = colorPalette[2][0][i];
+        colorBarBackground = new Color(colorPalette[1][2][0], colorPalette[1][2][1], colorPalette[1][2][2]);
+        colorBarInfo = new Color(colorPalette[2][0][0], colorPalette[2][0][1], colorPalette[2][0][2]);
 
-            colorDebugBackground[i] = colorPalette[0][4][i];
-            colorDebugText[i] = colorPalette[3][1][i];
+        colorDebugBackground = new Color(colorPalette[0][4][0], colorPalette[0][4][1], colorPalette[0][4][2]);
+        colorDebugText = new Color(colorPalette[3][1][0], colorPalette[3][1][1], colorPalette[3][1][2]);
 
-            colorButton[i] = colorPalette[2][1][i];
-            colorButtonHover[i] = colorPalette[2][2][i];
-            colorButtonSelected[i] = colorPalette[2][3][i];
-        }
+        colorButton = new Color(colorPalette[2][1][0], colorPalette[2][1][1], colorPalette[2][1][2]);
+        colorButtonHover = new Color(colorPalette[2][2][0], colorPalette[2][2][1], colorPalette[2][2][2]);
+        colorButtonSelected = new Color(colorPalette[2][3][0], colorPalette[2][3][1], colorPalette[2][3][2]);
+        
     }
 }

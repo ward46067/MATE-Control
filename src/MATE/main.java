@@ -13,9 +13,7 @@ public class main{
     public static void main(String[] args) {
         try {
             setup.setup();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
         }
    }

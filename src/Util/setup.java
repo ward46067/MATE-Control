@@ -1,6 +1,9 @@
 package Util;
 
+import GUI.GUI;
+import GUI.paint;
 import static Util.var.*;
+import java.awt.Graphics;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import processing.data.XML.*;
@@ -14,8 +17,7 @@ public class setup {
         log.debuglog("Loaded XML");
         color.colorSet();
         log.debuglog("Loaded Colors");
-        
-        
+        GUI.GUI();
         
     }
 }

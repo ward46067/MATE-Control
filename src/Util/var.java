@@ -1,5 +1,6 @@
 package Util;
 
+import java.awt.Color;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -93,22 +94,22 @@ public class var {
     public static int[][][] colorPalette = new int[4][5][3];
 
     //colors
-    public static int[] colorText = new int[3];
+    public static Color colorText;
 
-    public static int[] colorBackground = new int[3];
+    public static Color colorBackground;
 
-    public static int[] colorBarInfo = new int[3];
-    public static int[] colorBarBackground = new int[3];
+    public static Color colorBarInfo;
+    public static Color colorBarBackground;
 
-    public static int[] colorTitleBackground = new int[3];
+    public static Color colorTitleBackground;
 
-    public static int[] colorMotorBackground = new int[3];
-    public static int[] colorMotorBackgroundSS = new int[3];
+    public static Color colorMotorBackground;
+    public static Color colorMotorBackgroundSS;
 
-    public static int[] colorDebugBackground = new int[3];
-    public static int[] colorDebugText = new int[3];
+    public static Color colorDebugBackground;
+    public static Color colorDebugText;
 
-    public static int[] colorButton = new int[3];
-    public static int[] colorButtonHover = new int[3];
-    public static int[] colorButtonSelected = new int[3];
+    public static Color colorButton;
+    public static Color colorButtonHover;
+    public static Color colorButtonSelected;
 }
