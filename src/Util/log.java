@@ -1,6 +1,7 @@
 package Util;
 
 import static Util.var.*;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -13,14 +14,28 @@ public class log {
     public static PrintWriter motor2log;
     public static PrintWriter motor3log;
     public static PrintWriter motor4log;
+    
+    private static File outputlogFile = new File("logs\\outputlog.txt");
+    private static File debuglogFile = new File("logs\\debuglog.txt");
+    private static File motor1logFile = new File("logs\\motor1log.txt");
+    private static File motor2logFile = new File("logs\\motor2log.txt");
+    private static File motor3logFile = new File("logs\\motor3log.txt");
+    private static File motor4logFile = new File("logs\\motor4log.txt");
 
     public static void createLog() throws FileNotFoundException, UnsupportedEncodingException {
-        outputlog = new PrintWriter("logs/outputlog.txt", "UTF-8");
-        debuglog = new PrintWriter("logs/outputlog.txt", "UTF-8");
-        motor1log = new PrintWriter("logs/outputlog.txt", "UTF-8");
-        motor2log = new PrintWriter("logs/outputlog.txt", "UTF-8");
-        motor3log = new PrintWriter("logs/outputlog.txt", "UTF-8");
-        motor4log = new PrintWriter("logs/outputlog.txt", "UTF-8");
+        outputlogFile.getParentFile().mkdirs();
+        debuglogFile.getParentFile().mkdirs();
+        motor1logFile.getParentFile().mkdirs();
+        motor2logFile.getParentFile().mkdirs();
+        motor3logFile.getParentFile().mkdirs();
+        motor4logFile.getParentFile().mkdirs();
+        
+        outputlog = new PrintWriter(outputlogFile, "UTF-8");
+        debuglog = new PrintWriter(debuglogFile, "UTF-8");
+        motor1log = new PrintWriter(motor1logFile, "UTF-8");
+        motor2log = new PrintWriter(motor2logFile, "UTF-8");
+        motor3log = new PrintWriter(motor3logFile, "UTF-8");
+        motor4log = new PrintWriter(motor4logFile, "UTF-8");
     }
     
     public static void debuglog(String text){

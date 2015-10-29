@@ -9,9 +9,6 @@ public class setup {
     
     public static void setup() throws FileNotFoundException, UnsupportedEncodingException{
         log.createLog();
-        
-        XML colorXML;
-        colorXML = loadXML("libs/data/palette.xml");
         XML.XML();
         
     }

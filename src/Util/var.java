@@ -77,6 +77,7 @@ public class var {
     }
     
     //XML
+    /* old xml variables
     public static XML colorXML;
     
     
@@ -87,7 +88,7 @@ public class var {
     public static String xmlID;
     public static String paletteURL;
     public static XML xmlURL;
-
+    */
     //xml colors 
     public static int[][][] colorPalette = new int[4][5][3];
 
