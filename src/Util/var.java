@@ -1,6 +1,7 @@
 package Util;
 
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -112,4 +113,12 @@ public class var {
     public static Color colorButton;
     public static Color colorButtonHover;
     public static Color colorButtonSelected;
+    
+    public static int stringW(String text, Graphics2D d){
+        return (int) d.getFontMetrics().getStringBounds(text, d).getWidth();
+    }
+    
+    public static int stringH(String text, Graphics2D d){
+        return (int) d.getFontMetrics().getStringBounds(text, d).getHeight();
+    }
 }

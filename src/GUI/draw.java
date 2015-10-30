@@ -2,11 +2,14 @@ package GUI;
 
 import java.awt.Graphics2D;
 import static Util.var.*;
+import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Font;
 
 public class draw {
     
     private static Graphics2D d;
+    private static Font f;
     
     public static void draw(Graphics2D d){
         draw.d = d;
@@ -14,11 +17,20 @@ public class draw {
         title();
         debug();
         xyGraph();
+        rotation();
+        sensitivity();
+        elevation();
+        motor();
+        
+        write();
     }
-    
+    //builders
     private static void rect(Color c, int x, int y, int w, int h){
+        //outline
         d.setColor(Color.BLACK);
-        d.drawRect(x, y, w, h);
+        d.drawRect(x-1, y-1, w+1, h+1);
+        
+        //fill
         d.setColor(c);
         d.fillRect(x, y, w, h);
     }
@@ -28,6 +40,41 @@ public class draw {
         d.drawLine((int)x1, (int)y1, (int)x2, (int)y2);
     }
     
+    private static void text(String text, int x, int y){
+        d.setFont(f);
+        d.drawString(text, x, y);
+    }
+    
+    private static void textCB(String s, int x, int y){
+        text(s, x - (stringW(s, d)/2), y - (stringH(s, d)/3)); // /3 for better alignment
+    }
+    
+    private static void textLB(String s, int x,  int y){
+        text(s, x , y - (stringH(s, d)/3));
+    }
+    
+    private static void textCC(String s, int x, int y){
+        text(s, x - (stringW(s, d)/2), y + (stringH(s, d)/2));
+    }
+    private static void drawMotor(int x, int y, double s, double m){
+        //background
+        rect(colorMotorBackground, x, y, 300, 165);
+        
+        //speed background
+        rect(colorBarBackground, x+10, y+50, 280, 40);
+        
+        //speed bar
+        rect(colorBarInfo, x+50, y+50, (int) (140*m), 40);
+        
+        //servo background
+        rect(colorBarBackground, x+10, y+115, 280, 40);
+        
+        //servo bar
+        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, 5, 40);
+        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, -5, 40);
+    }
+    
+    //objects
     public static void background(){
         rect(colorBackground, 0, 0, width, height);
     }
@@ -54,6 +101,76 @@ public class draw {
         line(175, 275, 175 + x * 125, 275 + -z * 125);
         d.setColor(colorBarInfo);
         d.fillOval((int)(175 + x * 125), (int)(275 + -z * 125), 5, 5); //dot
+    }
+    
+    public static void rotation(){
+        //background
+        rect(colorBarBackground, 50, 535, 250, 40);
+        
+        //rotation
+        rect(colorBarInfo, 175, 535, (int) (125 * rotation), 40);
+    }
+    
+    public static void sensitivity(){
+        //background
+        rect(colorBarBackground, 50, 450, 250, 40);
+        
+        //sensitivity
+        rect(colorBarInfo, 50, 450, (int) (250 * sensitivity), 40);
+        
+    }
+    
+    public static void elevation(){
+        //background
+        rect(colorBarBackground, 350, 150, 40, 250);
+        
+        //elevation
+        rect(colorBarInfo, 350, 275, 40, (int) (-y * 125));
+    }
+    
+    public static void motor(){
+        //motor1
+        drawMotor(490, 150, motor1, servo1); 
+        
+        //motor2
+        drawMotor(840, 150, motor2, servo2);
+        
+        //motor 3
+        drawMotor(490, 340, motor3, servo3);
+        
+        //motor4
+        drawMotor(840, 340, motor4, servo4);
+    }
+    
+    //text
+    public static void write(){
+        d.setColor(colorText);
+        f = new Font("Comic Sans MS", Font.PLAIN, 18);
+        
+        textCB("Joystick Map", 175, 150);
+        textCB("Sensitivity: " + (sensitivity * 100) + "%", 175, 450);
+        textCB("Rotation: " + (rotation * 100), 175, 535);
+        textCB("Elevation", 370, 150);
+        textCB("Motor 1", 640, 175);
+        textCB("Motor 2", 990, 175);
+        textCB("Motor 3", 640, 365);
+        textCB("Motor 4", 990, 365);
+        
+        //motor1
+        textLB("Speed: " + (float)(motor1*100), 500, 200);
+        textLB("Servo: " + (float)(servo1), 500, 265);
+        //motor2
+        textLB("Speed: " + (float)(motor2*100), 850, 200);
+        textLB("Servo: " + (float)(servo2), 850, 265);
+        //motor3
+        textLB("Speed: " + (float)(motor3*100), 500, 390);
+        textLB("Servo: " + (float)(servo3), 500, 455);
+        //motor4
+        textLB("Speed: " + (float)(motor4*100), 850, 390);
+        textLB("Servo: " + (float)(servo4), 850, 455);
+        
+        f = new Font("Comic Sans MS", Font.PLAIN, 30);
+        textCC("MATE Control 2016", 600, 50);
     }
     
 }
