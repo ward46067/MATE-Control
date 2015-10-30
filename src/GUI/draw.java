@@ -1,10 +1,13 @@
 package GUI;
 
+import Util.var;
 import java.awt.Graphics2D;
 import static Util.var.*;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class draw {
     
@@ -23,6 +26,22 @@ public class draw {
         motor();
         
         write();
+        
+        //System.out.println("Going to loop");
+        //drawLoop();
+    }
+    
+    public static void drawLoop(){
+        int loop = 1;
+        while(loop == 1){
+            GUI.refresh();
+            
+            try {
+                Thread.sleep(16);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(draw.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
     //builders
     private static void rect(Color c, int x, int y, int w, int h){
@@ -56,6 +75,15 @@ public class draw {
     private static void textCC(String s, int x, int y){
         text(s, x - (stringW(s, d)/2), y + (stringH(s, d)/2));
     }
+    
+    private static void textLT(String s, int x, int y){
+        text(s, x , y + (stringH(s, d)/3));
+    }
+    
+    private static void textRT(String s, int x, int y){
+        text(s, (x - stringW(s, d)), y + (stringH(s, d)/3));
+    }
+    
     private static void drawMotor(int x, int y, double s, double m){
         //background
         rect(colorMotorBackground, x, y, 300, 165);
@@ -84,7 +112,7 @@ public class draw {
     }
     
     public static void debug(){
-        rect(colorDebugBackground, 1025, 550, 250, 50);
+        rect(colorDebugBackground, 1025, 550, 175, 50);
     }
     
     public static void xyGraph(){
@@ -145,7 +173,7 @@ public class draw {
     //text
     public static void write(){
         d.setColor(colorText);
-        f = new Font("Comic Sans MS", Font.PLAIN, 18);
+        setFontSize(18);
         
         textCB("Joystick Map", 175, 150);
         textCB("Sensitivity: " + (sensitivity * 100) + "%", 175, 450);
@@ -169,8 +197,38 @@ public class draw {
         textLB("Speed: " + (float)(motor4*100), 850, 390);
         textLB("Servo: " + (float)(servo4), 850, 455);
         
-        f = new Font("Comic Sans MS", Font.PLAIN, 30);
+        //title
+        setFontSize(30);
         textCC("MATE Control 2016", 600, 50);
+        
+        //debug title
+        setFontSize(15);
+        d.setColor(colorDebugText);
+        textCB("Debug", 1130, 575);
+        
+        //debug text
+        setFontSize(10);
+        textCB("Output: " + 'T' + hexOut(), 1140, 595);
+        
+        //date and time
+        setFontSize(15);
+        String dateTime = var.dateTime();
+        textLT(dateTime, 5, 20);
+        
+        //x
+        setFontSize(10);
+        textLT("X: " + (float)(x * 100), 55, 155);
+        
+        //y
+        textRT("Z: " + (float)(z * 100), 295, 155);
+        
+        //credits
+        setFontSize(15);
+        textRT("Created by Dalen Ward", 1115, 20);
+    }
+    
+    private static void setFontSize(int s){
+        f = new Font("Comic Sans MS", Font.PLAIN, s);
     }
     
 }
