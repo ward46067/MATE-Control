@@ -23,5 +23,7 @@ public class setup {
         
         GUI.GUI();
         log.debuglog("Loaded GUI");
+        
+        GUI.refresh();
     }
 }

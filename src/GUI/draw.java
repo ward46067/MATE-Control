@@ -26,23 +26,8 @@ public class draw {
         motor();
         
         write();
-        
-        //System.out.println("Going to loop");
-        //drawLoop();
     }
     
-    public static void drawLoop(){
-        int loop = 1;
-        while(loop == 1){
-            GUI.refresh();
-            
-            try {
-                Thread.sleep(16);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(draw.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
     //builders
     private static void rect(Color c, int x, int y, int w, int h){
         //outline
