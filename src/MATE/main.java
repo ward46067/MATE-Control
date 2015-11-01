@@ -11,6 +11,7 @@ import net.java.games.input.*;
 public class main{
     
     public static void main(String[] args) {
+        System.out.println("Starting");
         try {
             setup.setup();
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {

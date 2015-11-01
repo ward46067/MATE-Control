@@ -78,19 +78,15 @@ public class var {
         return dateTime() + " --> ";
     }
     
-    //XML
-    /* old xml variables
-    public static XML colorXML;
+    public static String logDateTimeMillis(){
+        long millis = System.currentTimeMillis() % 1000;
+        return dateTime() + "::" + millis + "--> ";
+    }
     
+    public static long millis(){
+        return System.currentTimeMillis();
+    }
     
-    public static XML[] colorset;
-    public static XML[] colorsetChild;
-
-
-    public static String xmlID;
-    public static String paletteURL;
-    public static XML xmlURL;
-    */
     //xml colors 
     public static int[][][] colorPalette = new int[4][5][3];
 
@@ -121,4 +117,6 @@ public class var {
     public static int stringH(String text, Graphics2D d){
         return (int) d.getFontMetrics().getStringBounds(text, d).getHeight();
     }
+    
+    public static long guiTimeMillis;
 }

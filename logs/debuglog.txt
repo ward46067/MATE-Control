@@ -1,0 +1,13 @@
+11/01/2015 21:30:21::295--> Starting
+11/01/2015 21:30:21::308--> Created logs
+11/01/2015 21:30:21::324--> Found XML
+11/01/2015 21:30:21::325--> Loading XML
+11/01/2015 21:30:21::325--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+11/01/2015 21:30:21::325--> Loaded XML
+11/01/2015 21:30:21::328--> Set all the colors
+11/01/2015 21:30:21::330--> Creating GUI
+11/01/2015 21:30:21::819--> Created GUI
+11/01/2015 21:30:21::820--> That took 490 milliseconds!
+11/01/2015 21:30:21::820--> Creating new Thread for loop
+11/01/2015 21:30:21::821--> Thread created
+11/01/2015 21:30:21::822--> Starting loop

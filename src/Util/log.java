@@ -8,12 +8,12 @@ import java.io.UnsupportedEncodingException;
 
 public class log {
     
-    public static PrintWriter outputlog;
-    public static PrintWriter debuglog;
-    public static PrintWriter motor1log;
-    public static PrintWriter motor2log;
-    public static PrintWriter motor3log;
-    public static PrintWriter motor4log;
+    private static PrintWriter outputlog;
+    private static PrintWriter debuglog;
+    private static PrintWriter motor1log;
+    private static PrintWriter motor2log;
+    private static PrintWriter motor3log;
+    private static PrintWriter motor4log;
     
     private static File outputlogFile = new File("logs\\outputlog.txt");
     private static File debuglogFile = new File("logs\\debuglog.txt");
@@ -36,18 +36,29 @@ public class log {
         motor2log = new PrintWriter(motor2logFile, "UTF-8");
         motor3log = new PrintWriter(motor3logFile, "UTF-8");
         motor4log = new PrintWriter(motor4logFile, "UTF-8");
+        debug("Starting");
+        debug("Created logs");
     }
     
-    public static void debuglog(String text){
-        debuglog.println(logDateTime() + text); 
+    public static void debug(String text){
+        debuglog.println(logDateTimeMillis() + text); 
+        debuglog.flush();
     }
     
     public static void log(){
-        outputlog.println(logDateTime() + var.hexOut());
+        outputlog.println(logDateTime() + 'T' + var.hexOut());
         motor1log.println(logDateTime() + "1, " + servo1 + ", " + motor1 + " PWM Signal: " + m1);
         motor2log.println(logDateTime() + "1, " + servo2 + ", " + motor2 + " PWM Signal: " + m2);
         motor3log.println(logDateTime() + "1, " + servo3 + ", " + motor3 + " PWM Signal: " + m3);
         motor4log.println(logDateTime() + "1, " + servo4 + ", " + motor4 + " PWM Signal: " + m4);
+        
+        outputlog.flush();
+        motor1log.flush();
+        motor2log.flush();
+        motor3log.flush();
+        motor4log.flush();
+        
+        //debug("Logged");
     }
     
 }

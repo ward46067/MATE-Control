@@ -17,6 +17,7 @@ public class paint extends JPanel{
     }
 
     private void drawBoard(Graphics2D d) {
+        //Util.log.debug("Created JPanel");
         draw.draw(d);
         
     }

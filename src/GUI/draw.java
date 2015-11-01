@@ -1,5 +1,6 @@
 package GUI;
 
+import Util.log;
 import Util.var;
 import java.awt.Graphics2D;
 import static Util.var.*;
@@ -8,6 +9,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static Util.log.debug;
 
 public class draw {
     
@@ -16,6 +18,9 @@ public class draw {
     
     public static void draw(Graphics2D d){
         draw.d = d;
+        
+        //log.debug("Drawing GUI");
+        
         background();
         title();
         debug();
@@ -24,8 +29,9 @@ public class draw {
         sensitivity();
         elevation();
         motor();
-        
         write();
+        
+        //log.debug("Drew GUI");
     }
     
     //builders

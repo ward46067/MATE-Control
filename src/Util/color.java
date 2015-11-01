@@ -1,5 +1,6 @@
 package Util;
 
+import static Util.log.debug;
 import java.io.File;
 
 import static Util.var.*;
@@ -10,8 +11,9 @@ public class color {
     public static void colorRead(){
         //File paletteFile = new File("lib\\data\\palette.xml");
         Xml palette = new Xml("palette.xml", "palette");
-        
-        log.debuglog.println("Palette URL: " + palette.child("url").content());
+        debug("Found XML");
+        debug("Loading XML");
+        debug("Palette URL: " + palette.child("url").content().trim());
         
         for(int i = 0; i < 4; i++){
             for(int x = 0; x < 5; x++){
@@ -20,7 +22,7 @@ public class color {
                 colorPalette[i][x][2] = palette.child("colorset" + (i+1)).child("color" + (x+1)).integer("b");
             }
         }
-        log.debuglog.println("Loaded XML");
+        debug("Loaded XML");
     }
     
     public static void colorSet(){
@@ -41,6 +43,8 @@ public class color {
         colorButton = new Color(colorPalette[2][1][0], colorPalette[2][1][1], colorPalette[2][1][2]);
         colorButtonHover = new Color(colorPalette[2][2][0], colorPalette[2][2][1], colorPalette[2][2][2]);
         colorButtonSelected = new Color(colorPalette[2][3][0], colorPalette[2][3][1], colorPalette[2][3][2]);
+        
+        debug("Set all the colors");
         
     }
 }
