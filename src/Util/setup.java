@@ -7,12 +7,13 @@ import static Util.log.debug;
 import static Util.var.*;
 import java.awt.Graphics;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import processing.data.XML.*;
 
 public class setup {
     
-    public static void setup() throws FileNotFoundException, UnsupportedEncodingException{
+    public static void setup() throws FileNotFoundException, UnsupportedEncodingException, IOException{
         log.createLog();
         color.colorRead();
         color.colorSet();
@@ -20,6 +21,9 @@ public class setup {
         
         log.debug("Created GUI");
         log.debug("That took " + ((millis()) - guiTimeMillis) + " milliseconds!");
+        
         loop.loop();
+        
+        connect.connect();
     }
 }

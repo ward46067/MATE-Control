@@ -1,12 +1,19 @@
 package Util;
 
+import gnu.io.CommPortIdentifier;
+import gnu.io.SerialPort;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import net.java.games.input.Controller;
 import static processing.core.PApplet.hex;
-import processing.data.XML;
+import processing.core.*;
+import processing.data.*;
+
 
 public class var {
     //robot
@@ -47,12 +54,6 @@ public class var {
     
     //sending to arduino
     public static long lastSend;
-    
-    //connect
-    boolean connectedDevice = false;
-    boolean connectedJoystick = false;
-    boolean connectedThrottle = false;
-    boolean connectedArduino = false;
     
     public static String hexOut(){
         return hex(m1,2) + hex(m2,2) + hex(m3,2) + hex(m4,2) + hex(s1,2) + hex(s3,2) + hex(s3,2) + hex(s4,2);
@@ -119,4 +120,20 @@ public class var {
     }
     
     public static long guiTimeMillis;
+    
+    //Arduino
+    public static CommPortIdentifier portID;
+    public static SerialPort port;
+    public static OutputStream portOutStream;
+    public static InputStream portInStream;
+    public static boolean connectedArduino = false;
+    
+    //joystick
+    public static Controller[] device;
+    public static Controller joystick;
+    public static Controller throttle;
+    
+    public static boolean connectedDevice = false;
+    public static boolean connectedJoystick = false;
+    public static boolean connectedThrottle = false;
 }

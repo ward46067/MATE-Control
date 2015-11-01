@@ -18,8 +18,8 @@ public class loop {
             
             public void run(){
                 
-                log.debug("Thread created");
-                log.debug("Starting loop");
+                //log.debug("Thread created");
+                //log.debug("Starting loop");
                 while(true){
                     
                     //screen refresh
@@ -37,6 +37,7 @@ public class loop {
                 }
             }
         }.start();
+        log.debug("Loop sucessful");
     }
 
 }
