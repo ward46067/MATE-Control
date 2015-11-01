@@ -1,2 +1,4 @@
-nbproject
+/nbproject/
 /build/built-jar.properties
+/logs/
+/dist/logs/
