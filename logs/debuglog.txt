@@ -1,34 +1,33 @@
-11/01/2015 22:42:16::240--> Starting
-11/01/2015 22:42:16::252--> Created logs
-11/01/2015 22:42:16::268--> Found XML
-11/01/2015 22:42:16::268--> Loading XML
-11/01/2015 22:42:16::268--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-11/01/2015 22:42:16::269--> Loaded XML
-11/01/2015 22:42:16::271--> Set all the colors
-11/01/2015 22:42:16::273--> Creating GUI
-11/01/2015 22:42:16::798--> Created GUI
-11/01/2015 22:42:16::798--> That took 525 milliseconds!
-11/01/2015 22:42:16::799--> Creating new Thread for loop
-11/01/2015 22:42:16::799--> Loop sucessful
-11/01/2015 22:42:16::802--> Connecting to Joystick
-11/01/2015 22:42:17::80--> Found a device: HID Keyboard Device
-11/01/2015 22:42:17::80--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: HID Keyboard Device
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: USB Charge Only Interface
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer Kraken 7.1 Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathStalker
-11/01/2015 22:42:17::81--> Found a device: Razer Kraken 7.1 Chroma
-11/01/2015 22:42:17::81--> Found a device: Razer DeathAdder Chroma
-11/01/2015 22:42:17::81--> Could not find and connect to controller!
-11/01/2015 22:42:19::836--> Connecting to Arduino
-11/01/2015 22:42:19::836--> Connecting to Arduino
-11/01/2015 22:42:19::996--> No Port Exception!
+11/02/2015 04:58:49::399--> Starting
+11/02/2015 04:58:49::411--> Created logs
+11/02/2015 04:58:49::428--> Found XML
+11/02/2015 04:58:49::428--> Loading XML
+11/02/2015 04:58:49::428--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+11/02/2015 04:58:49::429--> Loaded XML
+11/02/2015 04:58:49::431--> Set all the colors
+11/02/2015 04:58:49::433--> Creating GUI
+11/02/2015 04:58:49::929--> Created GUI
+11/02/2015 04:58:49::930--> That took 496 milliseconds!
+11/02/2015 04:58:49::930--> Creating new Thread for loop
+11/02/2015 04:58:49::931--> Loop sucessful
+11/02/2015 04:58:49::933--> Connecting to Joystick
+11/02/2015 04:58:50::120--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::120--> Found a device: HID Keyboard Device
+11/02/2015 04:58:50::120--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::120--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::120--> Found a device: HID Keyboard Device
+11/02/2015 04:58:50::120--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::120--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::120--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::120--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::120--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::120--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::121--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::121--> Found a device: Razer Kraken 7.1 Chroma
+11/02/2015 04:58:50::121--> Found a device: Razer DeathStalker
+11/02/2015 04:58:50::121--> Found a device: Razer Kraken 7.1 Chroma
+11/02/2015 04:58:50::121--> Found a device: Razer DeathAdder Chroma
+11/02/2015 04:58:50::121--> Could not find and connect to controller!
+11/02/2015 04:58:51::667--> Connecting to Arduino
+11/02/2015 04:58:51::667--> Connecting to Arduino
+11/02/2015 04:58:51::826--> No Port Exception!

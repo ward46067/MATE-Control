@@ -1,9 +1,9 @@
-package Util;
+package XML;
 
-import static Util.log.debug;
+import static debug.log.debug;
 import java.io.File;
 
-import static Util.var.*;
+import static util.var.*;
 import java.awt.Color;
 import java.util.ArrayList;
 

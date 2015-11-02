@@ -1,6 +1,7 @@
-package Util;
+package debug;
 
-import static Util.var.*;
+import util.var;
+import static util.var.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

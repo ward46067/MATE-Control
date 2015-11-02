@@ -1,6 +1,8 @@
-package Util;
+package device;
 
-import static Util.var.*;
+import debug.debug;
+import debug.log;
+import static util.var.*;
 import gnu.io.CommPortIdentifier;
 import gnu.io.NoSuchPortException;
 import gnu.io.PortInUseException;

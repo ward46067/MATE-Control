@@ -1,6 +1,7 @@
-package Util;
+package device;
 
-import static Util.var.*;
+import debug.debug;
+import static util.var.*;
 import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 

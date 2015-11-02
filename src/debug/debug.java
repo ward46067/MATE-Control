@@ -1,6 +1,6 @@
-package Util;
+package debug;
 
-import static Util.var.logDateTimeMillis;
+import static util.var.logDateTimeMillis;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 

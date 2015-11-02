@@ -1,7 +1,7 @@
 package GUI;
 
-import Util.log;
-import static Util.var.*;
+import debug.log;
+import static util.var.*;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.logging.Level;

@@ -1,10 +1,13 @@
-package Util;
+package math;
 
+import util.loop;
+import debug.log;
+import XML.color;
 import GUI.GUI;
 import GUI.paint;
-import Math.math;
-import static Util.log.debug;
-import static Util.var.*;
+import device.connect;
+import static debug.log.debug;
+import static util.var.*;
 import java.awt.Graphics;
 import java.io.FileNotFoundException;
 import java.io.IOException;
