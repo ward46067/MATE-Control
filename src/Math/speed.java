@@ -1,6 +1,6 @@
-package Math;
+package math;
 
-import static Util.var.*;
+import static util.var.*;
 
 public class speed{
     public static void speedZ(){

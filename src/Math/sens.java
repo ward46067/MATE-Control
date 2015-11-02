@@ -1,6 +1,6 @@
-package Math;
+package math;
 
-import static Util.var.*;
+import static util.var.*;
 
 public class sens{
     public static void sensitivity(){
@@ -13,7 +13,7 @@ public class sens{
             sensitivity = (float)minSensitivity;
 
         //boost
-        if(boost == 8) {
+        if(boost) {
             sensitivity = 1;
         }
 

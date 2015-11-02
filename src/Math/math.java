@@ -1,6 +1,7 @@
-package Math;
+package math;
 
-import static Util.var.*;
+import MATE.elevation;
+import static util.var.*;
 
 public class math{
     public static void math(){

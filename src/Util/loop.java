@@ -1,18 +1,21 @@
-package Util;
+package util;
 
+import debug.log;
 import GUI.GUI;
 import static GUI.GUI.pan;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import Util.log.*;
-import static Util.log.debug;
+import debug.log.*;
+import static debug.log.debug;
+import device.bind;
 import java.io.PrintWriter;
+import static util.var.connectedDevice;
 
 public class loop {
 
-    public static void loop(){
+    public static void gui(){
         
-        log.debug("Creating new Thread for loop");
+        log.debug("Creating new Thread for GUI");
         
         new Thread(){
             
@@ -28,7 +31,6 @@ public class loop {
                     
                     //log
                     log.log();
-                    
                     try {
                         Thread.sleep(16);
                     } catch (InterruptedException ex) {
@@ -37,7 +39,23 @@ public class loop {
                 }
             }
         }.start();
-        log.debug("Loop sucessful");
+        log.debug("GUI loop sucessful");
+    }
+    
+    
+    public static void poll(){
+        log.debug("Creating new thread to poll device values");
+        
+        new Thread(){
+            public void run(){
+                while(true){
+                    if(connectedDevice){
+                        bind.bind();
+                    }
+                }
+            }
+        }.start();
+        log.debug("Poll loop sucessful");
     }
 
 }

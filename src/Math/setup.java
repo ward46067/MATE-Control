@@ -25,8 +25,10 @@ public class setup {
         log.debug("Created GUI");
         log.debug("That took " + ((millis()) - guiTimeMillis) + " milliseconds!");
         
-        loop.loop();
+        loop.gui();
         
         connect.connect();
+        
+        loop.poll();
     }
 }
