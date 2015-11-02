@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
@@ -9,6 +9,8 @@ import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import net.java.games.input.Component;
+import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
 import static processing.core.PApplet.hex;
 import processing.core.*;
@@ -44,7 +46,9 @@ public class var {
     int defaultMode = 1;
 
     //display 
-    public static float x, y, z, sensitivity, boost, rotation, elevationButton, mode;
+    public static float x, y, z, sensitivity, rotation, mode;
+    
+    public static boolean boost, elevationButton;
     
     public static int width = 1200;
     public static int height = 600;
@@ -64,7 +68,7 @@ public class var {
     }
     
     public static String time(){
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
         Date date = new Date();
         return dateFormat.format(date);
     }
@@ -128,10 +132,19 @@ public class var {
     public static InputStream portInStream;
     public static boolean connectedArduino = false;
     
-    //joystick
+    //joystick & throttle
     public static Controller[] device;
-    public static Controller joystick;
-    public static Controller throttle;
+    public static Controller joystickController;
+    public static Controller throttleController;
+    
+    public static Component[] joystickComponent;
+    public static Component[] throttleComponent;
+    
+    public static Component joystick;
+    public static Component throttle;
+    
+    public static Identifier joystickIdent;
+    public static Identifier throttleIdent;
     
     public static boolean connectedDevice = false;
     public static boolean connectedJoystick = false;
