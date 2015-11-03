@@ -12,8 +12,6 @@ import java.util.Date;
 import net.java.games.input.Component;
 import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
-import static processing.core.PApplet.hex;
-import static sun.text.normalizer.Utility.hex;
 
 public class var {
     //robot
@@ -32,13 +30,13 @@ public class var {
     public static double motor3z = 0;
     public static double motor4z = 0;
 
-    public static double servo1 = 90;
+    public static double servo1 = 180;
     public static double servo2 = 90;
     public static double servo3 = 90;
     public static double servo4 = 90;
 
     //arduino 
-    public static int m1 = 254, m2 = 127, m3 = 127, m4 = 127, s1 = 90, s2 = 90, s3 = 90, s4 = 90;
+    public static int m1 = 254, m2 = 127, m3 = 127, m4 = 127, s1 = 180, s2 = 90, s3 = 90, s4 = 90;
 
     //mode 
     int defaultMode = 1;

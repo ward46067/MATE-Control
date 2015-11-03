@@ -1,34 +1,33 @@
-11/03/2015 01:35:58::139--> Starting
-11/03/2015 01:35:58::165--> Created logs
-11/03/2015 01:35:58::193--> Found XML
-11/03/2015 01:35:58::193--> Loading XML
-11/03/2015 01:35:58::193--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-11/03/2015 01:35:58::194--> Loaded XML
-11/03/2015 01:35:58::199--> Set all the colors
-11/03/2015 01:35:58::203--> Creating GUI
-11/03/2015 01:35:58::402--> Created GUI
-11/03/2015 01:35:58::403--> That took 200 milliseconds!
-11/03/2015 01:35:58::404--> Creating new Thread for GUI
-11/03/2015 01:35:58::405--> GUI loop sucessful
-11/03/2015 01:35:58::698--> Connecting to Joystick and Throttle
-11/03/2015 01:35:58::698--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::699--> Found a device: HID Keyboard Device
-11/03/2015 01:35:58::699--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::699--> Found a device: HID Keyboard Device
-11/03/2015 01:35:58::699--> Found a device: Standard PS/2 Keyboard
-11/03/2015 01:35:58::699--> Found a device: Dell Touchpad
-11/03/2015 01:35:58::699--> Found a device: PS/2 Compatible Mouse
-11/03/2015 01:35:58::699--> Found a device: HID-compliant mouse
-11/03/2015 01:35:58::700--> Found a device: Touchscreen
-11/03/2015 01:35:58::700--> Found a device: Airplane Mode Switch
-11/03/2015 01:35:58::700--> Found a device: Touchscreen
-11/03/2015 01:35:58::700--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::700--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::700--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::701--> Found a device: Razer DeathAdder Chroma
-11/03/2015 01:35:58::701--> Found a device: HIDI2C Device
-11/03/2015 01:35:58::701--> Found a device: Programmable Hotkeys
-11/03/2015 01:35:58::706--> Could not connect to Throttle and Joystick
-11/03/2015 01:36:00::20--> Connecting to Arduino
-11/03/2015 01:36:00::21--> Connecting to Arduino
-11/03/2015 01:36:00::36--> No port exception! Looks like the arduino isn't plugged in.
+11/03/2015 08:21:49::350--> Starting
+11/03/2015 08:21:49::361--> Created logs
+11/03/2015 08:21:49::377--> Found XML
+11/03/2015 08:21:49::377--> Loading XML
+11/03/2015 08:21:49::378--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+11/03/2015 08:21:49::378--> Loaded XML
+11/03/2015 08:21:49::380--> Set all the colors
+11/03/2015 08:21:49::382--> Creating GUI
+11/03/2015 08:21:49::844--> Created GUI
+11/03/2015 08:21:49::845--> That took 461 milliseconds!
+11/03/2015 08:21:49::845--> Creating new Thread for GUI
+11/03/2015 08:21:49::846--> GUI loop sucessful
+11/03/2015 08:21:50::43--> Connecting to Joystick and Throttle
+11/03/2015 08:21:50::43--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::43--> Found a device: HID Keyboard Device
+11/03/2015 08:21:50::43--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::43--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::44--> Found a device: HID Keyboard Device
+11/03/2015 08:21:50::44--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::45--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::45--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::45--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::45--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::46--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::46--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::46--> Found a device: Razer Kraken 7.1 Chroma
+11/03/2015 08:21:50::46--> Found a device: Razer DeathStalker
+11/03/2015 08:21:50::46--> Found a device: Razer Kraken 7.1 Chroma
+11/03/2015 08:21:50::46--> Found a device: Razer DeathAdder Chroma
+11/03/2015 08:21:50::47--> Could not connect to Throttle and Joystick
+11/03/2015 08:21:51::525--> Connecting to Arduino
+11/03/2015 08:21:51::525--> Connecting to Arduino
+11/03/2015 08:21:51::686--> No port exception! Looks like the arduino isn't plugged in.

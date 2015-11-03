@@ -89,8 +89,8 @@ public class draw {
         rect(colorBarBackground, x+10, y+115, 280, 40);
         
         //servo bar
-        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, 5, 40);
-        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, -5, 40);
+        rect(colorBarInfo, ((x+10) + (280 * (90/180))), y+115, 5, 40);
+        rect(colorBarInfo, ((x+10) + (280 * (90/180))), y+115, -5, 40);
     }
     
     //objects
