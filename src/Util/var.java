@@ -13,16 +13,14 @@ import net.java.games.input.Component;
 import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
 import static processing.core.PApplet.hex;
-import processing.core.*;
-import processing.data.*;
-
+import static sun.text.normalizer.Utility.hex;
 
 public class var {
     //robot
-    public static double motor1 = 0;
-    public static double motor2 = 0;
-    public static double motor3 = 0;
-    public static double motor4 = 0;
+    public static double motor1 = 1;
+    public static double motor2 = 1;
+    public static double motor3 = 1;
+    public static double motor4 = 1;
 
     public static double motor1x = 0;
     public static double motor2x = 0;
@@ -34,20 +32,25 @@ public class var {
     public static double motor3z = 0;
     public static double motor4z = 0;
 
-    public static double servo1 = 0;
-    public static double servo2 = 0;
-    public static double servo3 = 0;
-    public static double servo4 = 0;
+    public static double servo1 = 90;
+    public static double servo2 = 90;
+    public static double servo3 = 90;
+    public static double servo4 = 90;
 
     //arduino 
-    public static int m1, m2, m3, m4, s1, s2, s3, s4;
+    public static int m1 = 254, m2 = 127, m3 = 127, m4 = 127, s1 = 90, s2 = 90, s3 = 90, s4 = 90;
 
     //mode 
     int defaultMode = 1;
 
     //display 
-    public static float x, y, z, sensitivity, rotation, mode;
-    
+    public static float x;
+    public static float y;
+    public static float z;
+    public static float sensitivity;
+    public static float rotation;
+    public static float mode;
+            
     public static boolean boost, elevationButton;
     
     public static int width = 1200;
@@ -60,7 +63,15 @@ public class var {
     public static long lastSend;
     
     public static String hexOut(){
-        return hex(m1,2) + hex(m2,2) + hex(m3,2) + hex(m4,2) + hex(s1,2) + hex(s3,2) + hex(s3,2) + hex(s4,2);
+        return Integer.toHexString(m1) 
+                + Integer.toHexString(m2)
+                + Integer.toHexString(m3)
+                + Integer.toHexString(m4)
+                
+                + Integer.toHexString(s1)
+                + Integer.toHexString(s2)
+                + Integer.toHexString(s3)
+                + Integer.toHexString(s4);
     }
     
     public static String dateTime(){

@@ -33,7 +33,7 @@ public class connect {
             connectedArduino = true;
             
         }catch (NoSuchPortException e) {
-            debug.error("No Port Exception! Arduino must not be plugged in.");
+            debug.error("No port exception! Looks like the arduino isn't plugged in.");
             throw new IOException(e.getMessage());
         } catch (PortInUseException e) {
             debug.error("Port in use Exception!");

@@ -1,14 +1,17 @@
 package util;
 
+import static util.var.*;
 import debug.log;
 import GUI.GUI;
 import static GUI.GUI.pan;
+import Util.arduino;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import debug.log.*;
 import static debug.log.debug;
 import device.bind;
 import java.io.PrintWriter;
+import math.math;
 import static util.var.connectedDevice;
 
 public class loop {
@@ -29,8 +32,14 @@ public class loop {
                     pan.validate();
                     pan.repaint();
                     
+                    //math
+                    math.math();
+                    
                     //log
                     log.log();
+                    
+                    //print to arduino
+                    arduino.begin();
                     try {
                         Thread.sleep(16);
                     } catch (InterruptedException ex) {

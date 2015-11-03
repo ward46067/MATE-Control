@@ -83,7 +83,7 @@ public class draw {
         rect(colorBarBackground, x+10, y+50, 280, 40);
         
         //speed bar
-        rect(colorBarInfo, x+50, y+50, (int) (140*m), 40);
+        rect(colorBarInfo, x+10, y+50, (int) (140*(m/254)), 40);
         
         //servo background
         rect(colorBarBackground, x+10, y+115, 280, 40);
@@ -149,16 +149,16 @@ public class draw {
     
     public static void motor(){
         //motor1
-        drawMotor(490, 150, motor1, servo1); 
+        drawMotor(490, 150, m1, s1); 
         
         //motor2
-        drawMotor(840, 150, motor2, servo2);
+        drawMotor(840, 150, m2, s2);
         
         //motor 3
-        drawMotor(490, 340, motor3, servo3);
+        drawMotor(490, 340, m3, s3);
         
         //motor4
-        drawMotor(840, 340, motor4, servo4);
+        drawMotor(840, 340, m4, s4);
     }
     
     //text
