@@ -33,7 +33,7 @@ public class loop {
                     pan.repaint();
                     
                     //math
-                    math.math();
+                    //math.math();
                     
                     //log
                     log.log();
@@ -60,6 +60,11 @@ public class loop {
                 while(true){
                     if(connectedDevice){
                         bind.bind();
+                    }
+                    try {
+                        Thread.sleep(16);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(loop.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }

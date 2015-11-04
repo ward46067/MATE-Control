@@ -1,7 +1,7 @@
 package MATE;
 
 //imports
-import math.setup;
+import Util.setup;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

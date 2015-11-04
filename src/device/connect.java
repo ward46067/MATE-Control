@@ -17,13 +17,13 @@ public class connect {
         connectJoystick();
         
         log.debug("Connecting to Arduino");
-        connectArduino();
+        //connectArduino();
     }
     
     public static void connectArduino() throws IOException {
         log.debug("Connecting to Arduino");
         try{
-            portID = CommPortIdentifier.getPortIdentifier("COM4");
+            portID = CommPortIdentifier.getPortIdentifier("COM3");
             port = (SerialPort) portID.open("Ardiono Uno", 9600);
             
             portOutStream = port.getOutputStream();
@@ -87,7 +87,7 @@ public class connect {
                debug.error("Could not connect to Throttle");
            }
         } else {
-            bind.bind();
+            //bind.bind();
         }
     }
 }

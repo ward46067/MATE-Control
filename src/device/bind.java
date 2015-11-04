@@ -1,18 +1,25 @@
 package device;
 
 import debug.debug;
+import javax.swing.JOptionPane;
+import math.math;
 import net.java.games.input.Component;
+import util.var;
 import static util.var.*;
-import net.java.games.input.Controller;
-import net.java.games.input.ControllerEnvironment;
+import static util.var.joystickComponent;
+import static util.var.joystickIdent;
 
 public class bind {
     public static void bind(){
+        poll();
         //joystick
-        bindJoystick();
+        //bindJoystick();
         
         //throttle
         bindThrottle();
+        
+        //nath
+        math.math();
     }
     
     public static void bindJoystick(){
@@ -32,8 +39,9 @@ public class bind {
                     } 
                     
                     //boost
-                    if(joystickIdent == Component.Identifier.Button.TRIGGER){
+                    if(joystickIdent == Component.Identifier.Button._1){
                         boost = pressed;
+                        //JOptionPane.showMessageDialog(null, "Trigger");
                     }
                     
                     //elevation
@@ -50,16 +58,19 @@ public class bind {
                 
                 //Axis
                 if(joystick.isAnalog()){
-                    float axisValue = joystick.getPollData();
+                    float axisValueFloat = joystick.getPollData();
+                    float axisValue = var.getAxisValueInPercentage(axisValueFloat);
                     
                     //x 
                     if(joystickIdent == Component.Identifier.Axis.X){
                         x = axisValue;
+                        continue;
                     }
                     
                     //y 
                     if(joystickIdent == Component.Identifier.Axis.Y){
                         y = axisValue;
+                        continue;
                     }
                 }
             }
@@ -83,6 +94,7 @@ public class bind {
                     } else {
                         pressed = true;
                     }
+                    continue;
                 }
                 
                 //hat switch
@@ -96,8 +108,9 @@ public class bind {
                     float axisValue = throttle.getPollData();
                     
                     //sensitivity
-                    if(throttleIdent == Component.Identifier.Axis.SLIDER){ //i think
+                    if(throttleIdent == Component.Identifier.Axis.X){ //i think
                         sensitivity = axisValue;
+                        System.out.println(sensitivity);
                     }
                 }
             }
@@ -108,7 +121,12 @@ public class bind {
     }
     
     public static void poll(){
-        joystickController.poll();
-        throttleController.poll();
+        if(!joystickController.poll()){
+            debug.error("Joystick disconnected");
+        }
+        
+        if(!throttleController.poll()){
+            debug.error("Throttle disconnected");
+        }
     }
 }

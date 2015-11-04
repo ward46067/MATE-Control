@@ -75,7 +75,7 @@ public class draw {
         text(s, (x - stringW(s, d)), y + (stringH(s, d)/3));
     }
     
-    private static void drawMotor(int x, int y, double s, double m){
+    private static void drawMotor(int x, int y, int s, int m){
         //background
         rect(colorMotorBackground, x, y, 300, 165);
         
@@ -89,8 +89,8 @@ public class draw {
         rect(colorBarBackground, x+10, y+115, 280, 40);
         
         //servo bar
-        rect(colorBarInfo, ((x+10) + (280 * (90/180))), y+115, 5, 40);
-        rect(colorBarInfo, ((x+10) + (280 * (90/180))), y+115, -5, 40);
+        rect(colorBarInfo, ((x+10) + (280 * (s/180))), y+115, 5, 40);
+        rect(colorBarInfo, ((x+10) + (280 * (s/180))), y+115, -5, 40);
     }
     
     //objects

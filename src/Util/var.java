@@ -45,7 +45,7 @@ public class var {
     public static float x;
     public static float y;
     public static float z;
-    public static float sensitivity;
+    public static float sensitivity = 1;
     public static float rotation;
     public static float mode;
             
@@ -158,4 +158,9 @@ public class var {
     public static boolean connectedDevice = false;
     public static boolean connectedJoystick = false;
     public static boolean connectedThrottle = false;
+    
+    public static float getAxisValueInPercentage(float axisValue)
+    {
+        return (float)(((2 - (1 - axisValue)) * 100) / 2);
+    }
 }
