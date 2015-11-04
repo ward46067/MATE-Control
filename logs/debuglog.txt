@@ -1,58 +1,33 @@
-11/04/2015 01:34:45::318--> Starting
-11/04/2015 01:34:45::351--> Created logs
-11/04/2015 01:34:45::389--> Found XML
-11/04/2015 01:34:45::390--> Loading XML
-11/04/2015 01:34:45::390--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-11/04/2015 01:34:45::390--> Loaded XML
-11/04/2015 01:34:45::395--> Set all the colors
-11/04/2015 01:34:45::398--> Creating GUI
-11/04/2015 01:34:45::600--> Created GUI
-11/04/2015 01:34:45::601--> That took 202 milliseconds!
-11/04/2015 01:34:45::602--> Creating new Thread for GUI
-11/04/2015 01:34:45::604--> GUI loop sucessful
-11/04/2015 01:34:45::965--> Connecting to Joystick and Throttle
-11/04/2015 01:34:45::965--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::966--> Found a device: HID Keyboard Device
-11/04/2015 01:34:45::966--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::966--> Found a device: HID Keyboard Device
-11/04/2015 01:34:45::966--> Found a device: Standard PS/2 Keyboard
-11/04/2015 01:34:45::966--> Found a device: Dell Touchpad
-11/04/2015 01:34:45::966--> Found a device: PS/2 Compatible Mouse
-11/04/2015 01:34:45::966--> Found a device: HID-compliant mouse
-11/04/2015 01:34:45::967--> Found a device: Saitek Pro Flight X-55 Rhino Throttle
-11/04/2015 01:34:45::967--> Found throttle
-11/04/2015 01:34:45::967--> Connected to Saitek Pro Flight X-55 Rhino Throttle
-11/04/2015 01:34:45::967--> Found a device: Saitek Pro Flight X-55 Rhino Stick
-11/04/2015 01:34:45::967--> Found joystick
-11/04/2015 01:34:45::967--> Connected to Saitek Pro Flight X-55 Rhino Stick
-11/04/2015 01:34:45::968--> Connected to all controllers!
-11/04/2015 01:34:45::968--> Found a device: Saitek Pro Flight X-55 Rhino Throttle
-11/04/2015 01:34:45::968--> Found throttle
-11/04/2015 01:34:45::968--> Connected to Saitek Pro Flight X-55 Rhino Throttle
-11/04/2015 01:34:45::968--> Connected to all controllers!
-11/04/2015 01:34:45::968--> Found a device: Touchscreen
-11/04/2015 01:34:45::968--> Connected to all controllers!
-11/04/2015 01:34:45::969--> Found a device: Airplane Mode Switch
-11/04/2015 01:34:45::969--> Connected to all controllers!
-11/04/2015 01:34:45::969--> Found a device: Touchscreen
-11/04/2015 01:34:45::969--> Connected to all controllers!
-11/04/2015 01:34:45::969--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::969--> Connected to all controllers!
-11/04/2015 01:34:45::969--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::970--> Connected to all controllers!
-11/04/2015 01:34:45::970--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::971--> Connected to all controllers!
-11/04/2015 01:34:45::971--> Found a device: Razer DeathAdder Chroma
-11/04/2015 01:34:45::971--> Connected to all controllers!
-11/04/2015 01:34:45::971--> Found a device: HIDI2C Device
-11/04/2015 01:34:45::971--> Connected to all controllers!
-11/04/2015 01:34:45::972--> Found a device: Programmable Hotkeys
-11/04/2015 01:34:45::972--> Connected to all controllers!
-11/04/2015 01:34:45::972--> Found a device: Saitek Pro Flight X-55 Rhino Stick
-11/04/2015 01:34:45::972--> Found joystick
-11/04/2015 01:34:45::973--> Connected to Saitek Pro Flight X-55 Rhino Stick
-11/04/2015 01:34:45::973--> Connected to all controllers!
-11/04/2015 01:34:45::973--> Connecting to Arduino
-11/04/2015 01:34:45::973--> Creating new thread to poll device values
-11/04/2015 01:34:45::974--> Poll loop sucessful
-11/04/2015 01:34:49::519--> Joystick disconnected
+11/04/2015 08:47:01::10--> Starting
+11/04/2015 08:47:01::24--> Created logs
+11/04/2015 08:47:01::41--> Found XML
+11/04/2015 08:47:01::42--> Loading XML
+11/04/2015 08:47:01::42--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+11/04/2015 08:47:01::42--> Loaded XML
+11/04/2015 08:47:01::45--> Set all the colors
+11/04/2015 08:47:01::47--> Creating GUI
+11/04/2015 08:47:01::162--> Created GUI
+11/04/2015 08:47:01::162--> That took 115 milliseconds!
+11/04/2015 08:47:01::163--> Creating new Thread for GUI
+11/04/2015 08:47:01::163--> GUI loop sucessful
+11/04/2015 08:47:01::359--> Connecting to Joystick and Throttle
+11/04/2015 08:47:01::360--> Found a device: HID Keyboard Device
+11/04/2015 08:47:01::360--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::360--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::360--> Found a device: HID Keyboard Device
+11/04/2015 08:47:01::360--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::360--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::360--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::360--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::360--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::360--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::360--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::361--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::361--> Found a device: Razer Kraken 7.1 Chroma
+11/04/2015 08:47:01::361--> Found a device: Razer DeathStalker
+11/04/2015 08:47:01::361--> Found a device: Razer Kraken 7.1 Chroma
+11/04/2015 08:47:01::361--> Found a device: Razer DeathAdder Chroma
+11/04/2015 08:47:01::361--> Could not connect to Throttle and Joystick
+11/04/2015 08:47:03::62--> Connecting to Arduino
+11/04/2015 08:47:03::63--> Creating new thread to poll device values
+11/04/2015 08:47:03::63--> Poll loop sucessful
