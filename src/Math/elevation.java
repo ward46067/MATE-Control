@@ -1,4 +1,4 @@
-package MATE;
+package Math;
 
 import static util.var.*;
 

@@ -1,6 +1,6 @@
 package math;
 
-import MATE.elevation;
+import Math.elevation;
 import static util.var.*;
 
 public class math{

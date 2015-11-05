@@ -15,10 +15,10 @@ import net.java.games.input.Controller;
 
 public class var {
     //robot
-    public static double motor1 = 1;
-    public static double motor2 = 1;
-    public static double motor3 = 1;
-    public static double motor4 = 1;
+    public static double motor1 = 0.75;
+    public static double motor2 = 0;
+    public static double motor3 = 0.5;
+    public static double motor4 = 0.25;
 
     public static double motor1x = 0;
     public static double motor2x = 0;

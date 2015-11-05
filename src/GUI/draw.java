@@ -75,7 +75,7 @@ public class draw {
         text(s, (x - stringW(s, d)), y + (stringH(s, d)/3));
     }
     
-    private static void drawMotor(int x, int y, int s, int m){
+    private static void drawMotor(int x, int y, double m, double s){
         //background
         rect(colorMotorBackground, x, y, 300, 165);
         
@@ -83,14 +83,14 @@ public class draw {
         rect(colorBarBackground, x+10, y+50, 280, 40);
         
         //speed bar
-        rect(colorBarInfo, x+10, y+50, (int) (140*(m/254)), 40);
+        rect(colorBarInfo, x+10, y+50, (int)(m*280), 40);
         
         //servo background
         rect(colorBarBackground, x+10, y+115, 280, 40);
         
         //servo bar
-        rect(colorBarInfo, ((x+10) + (280 * (s/180))), y+115, 5, 40);
-        rect(colorBarInfo, ((x+10) + (280 * (s/180))), y+115, -5, 40);
+        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, 5, 40);
+        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, -5, 40);
     }
     
     //objects
@@ -149,16 +149,16 @@ public class draw {
     
     public static void motor(){
         //motor1
-        drawMotor(490, 150, m1, s1); 
+        drawMotor(490, 150, motor1, servo1); 
         
         //motor2
-        drawMotor(840, 150, m2, s2);
+        drawMotor(840, 150, motor2, servo2);
         
         //motor 3
-        drawMotor(490, 340, m3, s3);
+        drawMotor(490, 340, motor3, servo3);
         
         //motor4
-        drawMotor(840, 340, m4, s4);
+        drawMotor(840, 340, motor4, servo4);
     }
     
     //text
