@@ -50,30 +50,37 @@ public class connect {
         log.debug("Connecting to Joystick and Throttle");
         
         for (int i = 0; i < device.length; i++) {
-            log.debug("Found a device: " + device[i].getName());
+            //log.debug("Found a device: " + device[i].getName());
             
             //connect to joystick
-            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Stick")) {
+            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Stick") && !connectedJoystick) {
                 log.debug("Found joystick");
                 joystickController = device[i];
                 log.debug("Connected to " + joystickController.getName());
                 joystickComponent = joystickController.getComponents();
-                connectedJoystick = true;
+                log.debug("Joystick has " + joystickComponent.length + " components");
+                if(!(joystickComponent.length == 0)){
+                    connectedJoystick = true;
+                }
             }
             
             //connect to throttle
-            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Throttle")) {
+            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Throttle") && !connectedThrottle) {
                 log.debug("Found throttle");
                 throttleController = device[i];
                 log.debug("Connected to " + throttleController.getName());
                 throttleComponent = throttleController.getComponents();
-                connectedThrottle = true;
+                log.debug("Throttle has " + throttleComponent.length + " components");
+                if(!(throttleComponent.length == 0)){
+                    connectedThrottle = true;
+                }
             }
             
             //check connectedDevice
             if(connectedJoystick && connectedThrottle){
                 connectedDevice = true;
                 log.debug("Connected to all controllers!");
+                break;
             }  
         }
         

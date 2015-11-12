@@ -83,7 +83,7 @@ public class draw {
         rect(colorBarBackground, x+10, y+50, 280, 40);
         
         //speed bar
-        rect(colorBarInfo, x+10, y+50, (int)(m*280), 40);
+        rect(colorBarInfo, x+150, y+50, (int)(m*140), 40);
         
         //servo background
         rect(colorBarBackground, x+10, y+115, 280, 40);

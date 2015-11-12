@@ -5,7 +5,11 @@ import static util.var.*;
 public class elevation{
     
     public static void toggle(){
-        
+        if(elevationButton){
+            y = rotation;
+        } else {
+            y = 0;
+        }
     }
     
     public static void servo(){

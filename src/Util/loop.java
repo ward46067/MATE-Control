@@ -59,6 +59,15 @@ public class loop {
             public void run(){
                 while(true){
                     if(connectedDevice){
+                        if(!joystickController.poll()){
+                            System.out.println("Couldn't poll Joystick");
+                            break;
+                        }
+                        if(!throttleController.poll()){
+                            System.out.println("Couldn't poll Throttle");
+                            break;
+                        }
+                        
                         bind.bind();
                     }
                     try {
