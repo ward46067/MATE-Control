@@ -1,26 +1,17 @@
-11/12/2015 01:30:38::70--> Starting
-11/12/2015 01:30:38::102--> Created logs
-11/12/2015 01:30:38::135--> Found XML
-11/12/2015 01:30:38::136--> Loading XML
-11/12/2015 01:30:38::136--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-11/12/2015 01:30:38::137--> Loaded XML
-11/12/2015 01:30:38::143--> Set all the colors
-11/12/2015 01:30:38::148--> Creating GUI
-11/12/2015 01:30:38::373--> Created GUI
-11/12/2015 01:30:38::373--> That took 225 milliseconds!
-11/12/2015 01:30:38::375--> Creating new Thread for GUI
-11/12/2015 01:30:38::376--> GUI loop sucessful
-11/12/2015 01:30:38::714--> Connecting to Joystick and Throttle
-11/12/2015 01:30:38::715--> Found throttle
-11/12/2015 01:30:38::715--> Connected to Saitek Pro Flight X-55 Rhino Throttle
-11/12/2015 01:30:38::715--> Throttle has 39 components
-11/12/2015 01:30:38::715--> Found joystick
-11/12/2015 01:30:38::716--> Connected to Saitek Pro Flight X-55 Rhino Stick
-11/12/2015 01:30:38::716--> Joystick has 0 components
-11/12/2015 01:30:38::716--> Found joystick
-11/12/2015 01:30:38::716--> Connected to Saitek Pro Flight X-55 Rhino Stick
-11/12/2015 01:30:38::716--> Joystick has 21 components
-11/12/2015 01:30:38::716--> Connected to all controllers!
-11/12/2015 01:30:38::717--> Connecting to Arduino
-11/12/2015 01:30:38::717--> Creating new thread to poll device values
-11/12/2015 01:30:38::719--> Poll loop sucessful
+11/12/2015 07:30:46::303--> Starting
+11/12/2015 07:30:46::314--> Created logs
+11/12/2015 07:30:46::332--> Found XML
+11/12/2015 07:30:46::332--> Loading XML
+11/12/2015 07:30:46::332--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+11/12/2015 07:30:46::332--> Loaded XML
+11/12/2015 07:30:46::335--> Set all the colors
+11/12/2015 07:30:46::337--> Creating GUI
+11/12/2015 07:30:46::451--> Created GUI
+11/12/2015 07:30:46::451--> That took 114 milliseconds!
+11/12/2015 07:30:46::452--> Creating new Thread for GUI
+11/12/2015 07:30:46::453--> GUI loop sucessful
+11/12/2015 07:30:46::716--> Connecting to Joystick and Throttle
+11/12/2015 07:30:46::716--> Could not connect to Throttle and Joystick
+11/12/2015 07:30:48::478--> Connecting to Arduino
+11/12/2015 07:30:48::478--> Connecting to Arduino
+11/12/2015 07:30:48::639--> No port exception! Looks like the arduino isn't plugged in.

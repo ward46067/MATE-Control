@@ -17,7 +17,7 @@ public class connect {
         connectJoystick();
         
         log.debug("Connecting to Arduino");
-        //connectArduino();
+        connectArduino();
     }
     
     public static void connectArduino() throws IOException {
