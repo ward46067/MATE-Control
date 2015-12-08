@@ -1,17 +1,7 @@
-11/12/2015 07:30:46::303--> Starting
-11/12/2015 07:30:46::314--> Created logs
-11/12/2015 07:30:46::332--> Found XML
-11/12/2015 07:30:46::332--> Loading XML
-11/12/2015 07:30:46::332--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-11/12/2015 07:30:46::332--> Loaded XML
-11/12/2015 07:30:46::335--> Set all the colors
-11/12/2015 07:30:46::337--> Creating GUI
-11/12/2015 07:30:46::451--> Created GUI
-11/12/2015 07:30:46::451--> That took 114 milliseconds!
-11/12/2015 07:30:46::452--> Creating new Thread for GUI
-11/12/2015 07:30:46::453--> GUI loop sucessful
-11/12/2015 07:30:46::716--> Connecting to Joystick and Throttle
-11/12/2015 07:30:46::716--> Could not connect to Throttle and Joystick
-11/12/2015 07:30:48::478--> Connecting to Arduino
-11/12/2015 07:30:48::478--> Connecting to Arduino
-11/12/2015 07:30:48::639--> No port exception! Looks like the arduino isn't plugged in.
+12/08/2015 05:22:56::533--> Starting
+12/08/2015 05:22:56::546--> Created logs
+12/08/2015 05:22:56::563--> Found XML
+12/08/2015 05:22:56::564--> Loading XML
+12/08/2015 05:22:56::564--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+12/08/2015 05:22:56::564--> Loaded XML
+12/08/2015 05:22:56::567--> Set all the colors

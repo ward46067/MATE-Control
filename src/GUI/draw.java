@@ -1,15 +1,10 @@
 package GUI;
 
-import debug.log;
 import util.var;
 import java.awt.Graphics2D;
 import static util.var.*;
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static debug.log.debug;
 
 public class draw {
     
