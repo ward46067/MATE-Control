@@ -123,7 +123,7 @@ public class draw {
         //display joystick x y
         line(175, 275, 175 + x * 125, 275 + -z * 125);
         d.setColor(colorBarInfo);
-        d.fillOval((int)(175 + x * 125), (int)(275 + -z * 125), 5, 5); //dot
+        d.fillOval((int)(173 + x * 125), (int)(273 + -z * 125), 5, 5); //dot
     }
     
     public static void rotation(){
@@ -212,10 +212,10 @@ public class draw {
         
         //x
         setFontSize(10);
-        textLT("X: " + (float)(x * 100), 55, 155);
+        textLT("X: " + (int)(x * 100), 55, 155);
         
         //y
-        textRT("Z: " + (float)(z * 100), 295, 155);
+        textRT("Z: " + (int)(z * 100), 295, 155);
         
         //credits
         setFontSize(15);

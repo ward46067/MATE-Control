@@ -50,7 +50,6 @@ public class loop {
         log.debug("GUI loop sucessful");
     }
     
-    
     public static void poll(){
         log.debug("Creating new thread to poll device values");
         
@@ -58,7 +57,7 @@ public class loop {
             public void run(){
                 while(true){
                     if(!joystickController.poll()){
-                        debug.error("Couldn't pool Joystick");
+                        debug.error("Couldn't poll Joystick");
                         //System.out.println("Couldn't poll Joystick");
                         break;
                     }
