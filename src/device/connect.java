@@ -23,7 +23,7 @@ public class connect {
     public static void connectArduino() throws IOException {
         log.debug("Connecting to Arduino");
         try{
-            portID = CommPortIdentifier.getPortIdentifier("COM3");
+            portID = CommPortIdentifier.getPortIdentifier("COM5"); //change com
             port = (SerialPort) portID.open("Ardiono Uno", 9600);
             
             portOutStream = port.getOutputStream();
@@ -53,7 +53,7 @@ public class connect {
             //log.debug("Found a device: " + device[i].getName());
             
             //connect to joystick
-            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Stick") && !connectedJoystick) {
+            if (device[i].getName().equals("Logitech Extreme 3D") && !connectedJoystick) {
                 log.debug("Found joystick");
                 joystickController = device[i];
                 log.debug("Connected to " + joystickController.getName());
@@ -63,38 +63,12 @@ public class connect {
                     connectedJoystick = true;
                 }
             }
-            
-            //connect to throttle
-            if (device[i].getName().equals("Saitek Pro Flight X-55 Rhino Throttle") && !connectedThrottle) {
-                log.debug("Found throttle");
-                throttleController = device[i];
-                log.debug("Connected to " + throttleController.getName());
-                throttleComponent = throttleController.getComponents();
-                log.debug("Throttle has " + throttleComponent.length + " components");
-                if(!(throttleComponent.length == 0)){
-                    connectedThrottle = true;
-                }
+            if(connectedJoystick){
+                log.debug("Connected to Joystick");
             }
-            
-            //check connectedDevice
-            if(connectedJoystick && connectedThrottle){
-                connectedDevice = true;
-                log.debug("Connected to all controllers!");
-                break;
-            }  
         }
-        
-        //if couldn't connected to device
-        if(!connectedDevice){
-           if(!connectedJoystick && !connectedThrottle){
-               debug.error("Could not connect to Throttle and Joystick");
-           } else if(!connectedJoystick && connectedThrottle){
-               debug.error(("Could not connect to Joystick"));
-           } else if(connectedJoystick && !connectedThrottle){
-               debug.error("Could not connect to Throttle");
-           }
-        } else {
-            //bind.bind();
+        if(!connectedJoystick){
+            debug.error("Could not connect to the Joystick");
         }
     }
 }

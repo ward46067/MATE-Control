@@ -8,11 +8,10 @@ import Util.arduino;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import debug.log.*;
-import static debug.log.debug;
+import debug.debug;
 import device.bind;
 import java.io.PrintWriter;
 import math.math;
-import static util.var.connectedDevice;
 
 public class loop {
 
@@ -58,18 +57,14 @@ public class loop {
         new Thread(){
             public void run(){
                 while(true){
-                    if(connectedDevice){
-                        if(!joystickController.poll()){
-                            System.out.println("Couldn't poll Joystick");
-                            break;
-                        }
-                        if(!throttleController.poll()){
-                            System.out.println("Couldn't poll Throttle");
-                            break;
-                        }
-                        
-                        bind.bind();
+                    if(!joystickController.poll()){
+                        debug.error("Couldn't pool Joystick");
+                        //System.out.println("Couldn't poll Joystick");
+                        break;
                     }
+
+                    bind.bind();
+                    
                     try {
                         Thread.sleep(16);
                     } catch (InterruptedException ex) {

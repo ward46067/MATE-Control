@@ -144,20 +144,14 @@ public class var {
     //joystick & throttle
     public static Controller[] device;
     public static Controller joystickController;
-    public static Controller throttleController;
     
     public static Component[] joystickComponent;
-    public static Component[] throttleComponent;
     
     public static Component joystick;
-    public static Component throttle;
     
     public static Identifier joystickIdent;
-    public static Identifier throttleIdent;
     
-    public static boolean connectedDevice = false;
     public static boolean connectedJoystick = false;
-    public static boolean connectedThrottle = false;
     
     public static float getAxisValueInPercentage(float axisValue)
     {

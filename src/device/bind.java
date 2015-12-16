@@ -14,9 +14,6 @@ public class bind {
         //joystick
         bindJoystick();
         
-        //throttle
-        bindThrottle();
-        
         //nath
         math.math();
     }
@@ -43,7 +40,7 @@ public class bind {
                 }
 
                 //elevation
-                if(joystickIdent == Component.Identifier.Button._4){
+                if(joystickIdent == Component.Identifier.Button._1){
                     elevationButton = pressed;
                 }
             }
@@ -72,6 +69,13 @@ public class bind {
                     continue;
                 }
                 
+                //sensitivity
+                if(joystickIdent == Component.Identifier.Axis.SLIDER){
+                    sensitivity = axisValue;
+                    continue;
+                }
+                
+                //rotation
                 if(joystick.getName().equals("Z Rotation")){
                     rotation = axisValue;
                     continue;
@@ -80,51 +84,9 @@ public class bind {
         } 
     }
     
-    public static void bindThrottle(){
-        
-        for(int i = 0; i < throttleComponent.length; i++){
-            throttle = throttleComponent[i];
-            throttleIdent = throttle.getIdentifier();
-
-            //buttons
-            if(throttle.getName().contains("Button")){
-                boolean pressed;
-
-                if(throttle.getPollData() == 0.0f){
-                    pressed = false;
-                } else {
-                    pressed = true;
-                }
-                continue;
-            }
-
-            //hat switch
-            if(throttleIdent == Component.Identifier.Axis.POV){
-                //not planning on using hatswitch, so continue
-                continue;
-            }
-
-            //axis
-            if(throttle.isAnalog()){
-                float axisValue = throttle.getPollData();
-
-                //sensitivity
-                if(throttleIdent == Component.Identifier.Axis.Y){ //i think
-                    sensitivity = axisValue;
-                    //System.out.println(sensitivity);
-                }
-            }
-        }
-    }
-        
-    
     public static void poll(){
         if(!joystickController.poll()){
             debug.error("Joystick disconnected");
-        }
-        
-        if(!throttleController.poll()){
-            debug.error("Throttle disconnected");
         }
     }
 }

@@ -1,7 +1,23 @@
-12/08/2015 05:22:56::533--> Starting
-12/08/2015 05:22:56::546--> Created logs
-12/08/2015 05:22:56::563--> Found XML
-12/08/2015 05:22:56::564--> Loading XML
-12/08/2015 05:22:56::564--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-12/08/2015 05:22:56::564--> Loaded XML
-12/08/2015 05:22:56::567--> Set all the colors
+12/16/2015 08:50:01::299--> Starting
+12/16/2015 08:50:01::325--> Created logs
+12/16/2015 08:50:01::354--> Found XML
+12/16/2015 08:50:01::355--> Loading XML
+12/16/2015 08:50:01::355--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+12/16/2015 08:50:01::355--> Loaded XML
+12/16/2015 08:50:01::361--> Set all the colors
+12/16/2015 08:50:01::365--> Creating GUI
+12/16/2015 08:50:01::555--> Created GUI
+12/16/2015 08:50:01::555--> That took 190 milliseconds!
+12/16/2015 08:50:01::557--> Creating new Thread for GUI
+12/16/2015 08:50:01::559--> GUI loop sucessful
+12/16/2015 08:50:01::809--> Connecting to Joystick and Throttle
+12/16/2015 08:50:01::810--> Found joystick
+12/16/2015 08:50:01::810--> Connected to Logitech Extreme 3D
+12/16/2015 08:50:01::810--> Joystick has 17 components
+12/16/2015 08:50:01::810--> Connected to Joystick
+12/16/2015 08:50:01::810--> Connecting to Arduino
+12/16/2015 08:50:01::811--> Connecting to Arduino
+12/16/2015 08:50:01::845--> Connected to Arduino
+12/16/2015 08:50:01::845--> Creating new thread to poll device values
+12/16/2015 08:50:01::846--> Poll loop sucessful
+12/16/2015 08:51:08::930--> Couldn't pool Joystick
