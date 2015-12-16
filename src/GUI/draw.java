@@ -31,6 +31,15 @@ public class draw {
     
     //builders
     private static void rect(Color c, int x, int y, int w, int h){
+        if(w < 0){
+            w *= -1;
+            x -= w;
+        }
+        
+        if(h < 0){
+            h *= -1;
+            y -= h;
+        }
         //outline
         d.setColor(Color.BLACK);
         d.drawRect(x-1, y-1, w+1, h+1);
@@ -162,8 +171,8 @@ public class draw {
         setFontSize(18);
         
         textCB("Joystick Map", 175, 150);
-        textCB("Sensitivity: " + (sensitivity * 100) + "%", 175, 450);
-        textCB("Rotation: " + (rotation * 100), 175, 535);
+        textCB("Sensitivity: " + (int)(sensitivity * 100) + "%", 175, 450);
+        textCB("Rotation: " + (int)(rotation * 100), 175, 535);
         textCB("Elevation", 370, 150);
         textCB("Motor 1", 640, 175);
         textCB("Motor 2", 990, 175);
@@ -171,17 +180,17 @@ public class draw {
         textCB("Motor 4", 990, 365);
         
         //motor1
-        textLB("Speed: " + (float)(motor1*100), 500, 200);
-        textLB("Servo: " + (float)(servo1), 500, 265);
+        textLB("Speed: " + (int)(motor1*100), 500, 200);
+        textLB("Servo: " + (int)(servo1), 500, 265);
         //motor2
-        textLB("Speed: " + (float)(motor2*100), 850, 200);
-        textLB("Servo: " + (float)(servo2), 850, 265);
+        textLB("Speed: " + (int)(motor2*100), 850, 200);
+        textLB("Servo: " + (int)(servo2), 850, 265);
         //motor3
-        textLB("Speed: " + (float)(motor3*100), 500, 390);
-        textLB("Servo: " + (float)(servo3), 500, 455);
+        textLB("Speed: " + (int)(motor3*100), 500, 390);
+        textLB("Servo: " + (int)(servo3), 500, 455);
         //motor4
-        textLB("Speed: " + (float)(motor4*100), 850, 390);
-        textLB("Servo: " + (float)(servo4), 850, 455);
+        textLB("Speed: " + (int)(motor4*100), 850, 390);
+        textLB("Servo: " + (int)(servo4), 850, 455);
         
         //title
         setFontSize(30);

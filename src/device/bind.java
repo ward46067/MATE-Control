@@ -14,7 +14,7 @@ public class bind {
         //joystick
         bindJoystick();
         
-        //nath
+        //math
         math.math();
     }
     

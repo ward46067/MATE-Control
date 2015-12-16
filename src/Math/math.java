@@ -14,10 +14,10 @@ public class math{
         elevation.servo();
 
         //calculate motor output
-        m1 = (int)(motor1 * 127) + 127;
-        m2 = (int)(motor2 * 127) + 127;
-        m3 = (int)(motor3 * 127) + 127;
-        m4 = (int)(motor4 * 127) + 127;
+        m1 = (int)(motor1 * 100) + 100;
+        m2 = (int)(motor2 * 100) + 100;
+        m3 = (int)(motor3 * 100) + 100;
+        m4 = (int)(motor4 * 100) + 100;
 
         //calculate servo output
         s1 = (int)(servo1);
