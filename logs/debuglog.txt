@@ -1,23 +1,31 @@
-12/16/2015 09:23:49::434--> Starting
-12/16/2015 09:23:49::472--> Created logs
-12/16/2015 09:23:49::518--> Found XML
-12/16/2015 09:23:49::518--> Loading XML
-12/16/2015 09:23:49::519--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-12/16/2015 09:23:49::519--> Loaded XML
-12/16/2015 09:23:49::524--> Set all the colors
-12/16/2015 09:23:49::529--> Creating GUI
-12/16/2015 09:23:49::734--> Created GUI
-12/16/2015 09:23:49::734--> That took 205 milliseconds!
-12/16/2015 09:23:49::736--> Creating new Thread for GUI
-12/16/2015 09:23:49::737--> GUI loop sucessful
-12/16/2015 09:23:50::45--> Connecting to Joystick and Throttle
-12/16/2015 09:23:50::46--> Found joystick
-12/16/2015 09:23:50::46--> Connected to Logitech Extreme 3D
-12/16/2015 09:23:50::46--> Joystick has 17 components
-12/16/2015 09:23:50::46--> Connected to Joystick
-12/16/2015 09:23:50::46--> Connecting to Arduino
-12/16/2015 09:23:50::46--> Connecting to Arduino
-12/16/2015 09:23:50::83--> Connected to Arduino
-12/16/2015 09:23:50::83--> Creating new thread to poll device values
-12/16/2015 09:23:50::85--> Poll loop sucessful
-12/16/2015 09:24:12::742--> Couldn't poll Joystick
+12/22/2015 08:45:53::84--> Starting
+12/22/2015 08:45:53::97--> Created logs
+12/22/2015 08:45:53::116--> Found XML
+12/22/2015 08:45:53::116--> Loading XML
+12/22/2015 08:45:53::116--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+12/22/2015 08:45:53::116--> Loaded XML
+12/22/2015 08:45:53::119--> Set all the colors
+12/22/2015 08:45:53::122--> Creating GUI
+12/22/2015 08:45:53::586--> Created GUI
+12/22/2015 08:45:53::586--> That took 464 milliseconds!
+12/22/2015 08:45:53::587--> Creating new Thread for GUI
+12/22/2015 08:45:53::587--> GUI loop sucessful
+12/22/2015 08:45:53::768--> Connecting to Joystick and Throttle
+12/22/2015 08:45:53::768--> Found joystick
+12/22/2015 08:45:53::768--> Connected to Logitech Extreme 3D
+12/22/2015 08:45:53::769--> Joystick has 17 components
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connected to Joystick
+12/22/2015 08:45:53::769--> Connecting to Arduino
+12/22/2015 08:45:53::769--> Connecting to Arduino
+12/22/2015 08:45:53::863--> Connected to Arduino
+12/22/2015 08:45:53::863--> Creating new thread to poll device values
+12/22/2015 08:45:53::863--> Poll loop sucessful
+12/22/2015 08:47:02::330--> Couldn't poll Joystick

@@ -23,7 +23,7 @@ public class connect {
     public static void connectArduino() throws IOException {
         log.debug("Connecting to Arduino");
         try{
-            portID = CommPortIdentifier.getPortIdentifier("COM5"); //change com
+            portID = CommPortIdentifier.getPortIdentifier("COM3"); //change com
             port = (SerialPort) portID.open("Ardiono Uno", 9600);
             
             portOutStream = port.getOutputStream();
