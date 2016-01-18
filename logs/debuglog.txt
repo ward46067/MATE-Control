@@ -1,17 +1,17 @@
-01/18/2016 01:20:43::796--> Starting
-01/18/2016 01:20:43::820--> Created logs
-01/18/2016 01:20:43::847--> Found XML
-01/18/2016 01:20:43::848--> Loading XML
-01/18/2016 01:20:43::848--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-01/18/2016 01:20:43::848--> Loaded XML
-01/18/2016 01:20:43::853--> Set all the colors
-01/18/2016 01:20:43::856--> Creating GUI
-01/18/2016 01:20:44::14--> Created GUI
-01/18/2016 01:20:44::14--> That took 157 milliseconds!
-01/18/2016 01:20:44::16--> Creating new Thread for GUI
-01/18/2016 01:20:44::17--> GUI loop sucessful
-01/18/2016 01:20:44::204--> Connecting to Joystick and Throttle
-01/18/2016 01:20:44::205--> Could not connect to the Joystick
-01/18/2016 01:20:45::367--> Connecting to Arduino
-01/18/2016 01:20:45::367--> Connecting to Arduino
-01/18/2016 01:20:45::382--> No port exception! Looks like the arduino isn't plugged in.
+01/18/2016 04:22:24::495--> Starting
+01/18/2016 04:22:24::510--> Created logs
+01/18/2016 04:22:24::527--> Found XML
+01/18/2016 04:22:24::528--> Loading XML
+01/18/2016 04:22:24::528--> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+01/18/2016 04:22:24::528--> Loaded XML
+01/18/2016 04:22:24::531--> Set all the colors
+01/18/2016 04:22:24::534--> Creating GUI
+01/18/2016 04:22:25::24--> Created GUI
+01/18/2016 04:22:25::24--> That took 490 milliseconds!
+01/18/2016 04:22:25::25--> Creating new Thread for GUI
+01/18/2016 04:22:25::26--> GUI loop sucessful
+01/18/2016 04:22:25::261--> Connecting to Joystick and Throttle
+01/18/2016 04:22:25::262--> Could not connect to the Joystick
+01/18/2016 04:22:27::986--> Connecting to Arduino
+01/18/2016 04:22:27::986--> Connecting to Arduino
+01/18/2016 04:22:28::147--> No port exception! Looks like the arduino isn't plugged in.
