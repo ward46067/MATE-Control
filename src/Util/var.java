@@ -27,6 +27,8 @@ public class var {
     //arduino 
     public static int m1;
     public static int m2;
+    
+    //servos
 
     //mode 
     int defaultMode = 1;
