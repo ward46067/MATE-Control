@@ -79,22 +79,15 @@ public class draw {
         text(s, (x - stringW(s, d)), y + (stringH(s, d)/3));
     }
     
-    private static void drawMotor(int x, int y, double m, double s){
+    private static void drawMotor(int x, int y, double m){
         //background
-        rect(colorMotorBackground, x, y, 300, 165);
+        rect(colorMotorBackground, x, y, 300, 115);
         
         //speed background
         rect(colorBarBackground, x+10, y+50, 280, 40);
         
         //speed bar
         rect(colorBarInfo, x+150, y+50, (int)(m*140), 40);
-        
-        //servo background
-        rect(colorBarBackground, x+10, y+115, 280, 40);
-        
-        //servo bar
-        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, 5, 40);
-        rect(colorBarInfo, (int) ((x+10) + (280 * (s/180))), y+115, -5, 40);
     }
     
     //objects
@@ -153,16 +146,10 @@ public class draw {
     
     public static void motor(){
         //motor1
-        drawMotor(490, 150, motor1, servo1); 
+        drawMotor(490, 150, motor1); 
         
         //motor2
-        drawMotor(840, 150, motor2, servo2);
-        
-        //motor 3
-        drawMotor(490, 340, motor3, servo3);
-        
-        //motor4
-        drawMotor(840, 340, motor4, servo4);
+        drawMotor(490, 290, motor2);
     }
     
     //text
@@ -175,22 +162,12 @@ public class draw {
         textCB("Rotation: " + (int)(rotation * 100), 175, 535);
         textCB("Elevation", 370, 150);
         textCB("Motor 1", 640, 175);
-        textCB("Motor 2", 990, 175);
-        textCB("Motor 3", 640, 365);
-        textCB("Motor 4", 990, 365);
+        textCB("Motor 2", 640, 315);
         
         //motor1
         textLB("Speed: " + (int)(motor1*100), 500, 200);
-        textLB("Servo: " + (int)(servo1), 500, 265);
         //motor2
-        textLB("Speed: " + (int)(motor2*100), 850, 200);
-        textLB("Servo: " + (int)(servo2), 850, 265);
-        //motor3
-        textLB("Speed: " + (int)(motor3*100), 500, 390);
-        textLB("Servo: " + (int)(servo3), 500, 455);
-        //motor4
-        textLB("Speed: " + (int)(motor4*100), 850, 390);
-        textLB("Servo: " + (int)(servo4), 850, 455);
+        textLB("Speed: " + (int)(motor2*100), 500, 340);
         
         //title
         setFontSize(30);

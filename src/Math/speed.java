@@ -21,52 +21,37 @@ public class speed{
     }
     
     public static void speed(){
-        //zeros
-        if(x == 0) {
+        if(x == 0){
             motor1x = 0;
             motor2x = 0;
-            motor3x = 0;
-            motor4x = 0;
         }
-        if(z == 0) {
-            motor1z = 0;
+        
+        if(z == 0){
+            motor1x = 0;
             motor2z = 0;
-            motor3z = 0;
-            motor4z = 0;
         }
         
-        //x
-        if(x < 0) {
-            motor1x = x;
-            motor2x = -1 * x;
-            motor3x = -1 * x;
-            motor4x = x;
-        }
-        if(x > 0) {
-            motor1x = x;
-            motor2x = -1 * x;
-            motor3x = -1 * x;
-            motor4x = x;
+        if(x > 0){
+            motor1x = -x;
+            motor2x = x;
         }
         
-        //z
-        if(z > 0) {
-            motor1z = -1 * z;
-            motor2z = -1 * z;
-            motor3z = z;
-            motor4z = z;
-        }
-        if(z < 0) {
-            motor1z = -1 * z;
-            motor2z = -1 * z;
-            motor3z = z;
-            motor4z = z;
+        if(x < 0){
+            motor1x = -x;
+            motor2x = x;
         }
         
-        //add
+        if(z > 1){
+            motor1z = z;
+            motor2z = z;
+        }
+        
+        if(z < 1){
+            motor1z = z;
+            motor2z = z;
+        }
+        
         motor1 = motor1x + motor1z;
         motor2 = motor2x + motor2z;
-        motor3 = motor3x + motor3z;
-        motor4 = motor4x + motor4z;
     }
 }

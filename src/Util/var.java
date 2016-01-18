@@ -17,26 +17,16 @@ public class var {
     //robot
     public static double motor1 = 0;
     public static double motor2 = 0;
-    public static double motor3 = 0;
-    public static double motor4 = 0;
 
     public static double motor1x = 0;
     public static double motor2x = 0;
-    public static double motor3x = 0;
-    public static double motor4x = 0;
 
     public static double motor1z = 0;
     public static double motor2z = 0;
-    public static double motor3z = 0;
-    public static double motor4z = 0;
-
-    public static double servo1 = 90;
-    public static double servo2 = 90;
-    public static double servo3 = 90;
-    public static double servo4 = 90;
 
     //arduino 
-    public static int m1 = 254, m2 = 254, m3 = 254, m4 = 254, s1 = 90, s2 = 90, s3 = 90, s4 = 90;
+    public static int m1;
+    public static int m2;
 
     //mode 
     int defaultMode = 1;
@@ -62,14 +52,7 @@ public class var {
     
     public static String hexOut(){
         return Integer.toHexString(m1) 
-                + Integer.toHexString(m2)
-                + Integer.toHexString(m3)
-                + Integer.toHexString(m4)
-                
-                + Integer.toHexString(s1)
-                + Integer.toHexString(s2)
-                + Integer.toHexString(s3)
-                + Integer.toHexString(s4);
+                + Integer.toHexString(m2);
     }
     
     public static String dateTime(){

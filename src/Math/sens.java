@@ -21,10 +21,6 @@ public class sens{
         x *= sensitivity;
         y *= sensitivity;
         z *= sensitivity;
-        motor1 *= sensitivity;
-        motor2 *= sensitivity;
-        motor3 *= sensitivity;
-        motor4 *= sensitivity;
         rotation *= sensitivity;
     }
 }
