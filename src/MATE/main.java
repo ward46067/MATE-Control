@@ -2,22 +2,32 @@ package MATE;
 
 //imports
 //import Util.setup;
-import Util.setup;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import net.java.games.input.*;
+import robot.Arduino;
+import robot.Joystick;
+import robot.Log;
 
 public class main{
-    
     public static void main(String[] args) throws IOException {
         System.out.println("Starting");
-        try {
-            setup.setup();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+        var.log = new Log("MAIN");
+        var.log.write("Starting.");
+        var.log.write("Connecting to devices.");
+        
+        //joystick
+        var.joystick = new Joystick("Logitech Extreme 3D");
+        var.joystick.connect();
+        
+        //arduino
+        var.arduino = new Arduino("Arduino Uno", "COM3", 115200);
+        var.arduino.connect();
+
+        color.colorRead();
+        color.colorSet();
+        GUI.GUI();
+        
+        var.log.write("Created GUI.");
    }
 }

@@ -1,11 +1,6 @@
-package GUI;
+package MATE;
 
-import debug.log;
-import static util.var.*;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import static MATE.var.*;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.*;
 import javax.swing.JPanel;
@@ -16,8 +11,8 @@ public class GUI {
     public static JPanel pan;
     
     public static void GUI(){ 
-        log.debug("Creating GUI");
-        guiTimeMillis = millis();
+        var.log.write("Creating GUI");
+        
         
         gui = new JFrame("MATE Control");
         gui.setTitle("MATE Controller");

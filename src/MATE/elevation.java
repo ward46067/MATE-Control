@@ -1,6 +1,6 @@
-package Math;
+package MATE;
 
-import static util.var.*;
+import static MATE.var.*;
 
 public class elevation{
     

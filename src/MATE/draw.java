@@ -1,8 +1,7 @@
-package GUI;
+package MATE;
 
-import util.var;
 import java.awt.Graphics2D;
-import static util.var.*;
+import static MATE.var.*;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -108,10 +107,10 @@ public class draw {
         rect(colorBarBackground, 50, 150, 250, 250);
         
         //restraint lines
-        line(175 - 125*sensitivity, 275, 175, 275 - 125*sensitivity);
-        line(175, 275 - 125*sensitivity, 175 + 125*sensitivity, 275);
-        line(175 - 125*sensitivity, 275, 175, 275 + 125*sensitivity);
-        line(175, 275 + 125*sensitivity, 175 + 125*sensitivity, 275);
+        line(175 - 125*var.sensitivity(), 275, 175, 275 - 125*var.sensitivity());
+        line(175, 275 - 125*var.sensitivity(), 175 + 125*var.sensitivity(), 275);
+        line(175 - 125*var.sensitivity(), 275, 175, 275 + 125*var.sensitivity());
+        line(175, 275 + 125*var.sensitivity(), 175 + 125*var.sensitivity(), 275);
         
         //display joystick x y
         line(175, 275, 175 + x * 125, 275 + -z * 125);
@@ -132,7 +131,7 @@ public class draw {
         rect(colorBarBackground, 50, 450, 250, 40);
         
         //sensitivity
-        rect(colorBarInfo, 50, 450, (int) (250 * sensitivity), 40);
+        rect(colorBarInfo, 50, 450, (int) (250 * var.sensitivity()), 40);
         
     }
     
@@ -158,8 +157,8 @@ public class draw {
         setFontSize(18);
         
         textCB("Joystick Map", 175, 150);
-        textCB("Sensitivity: " + (int)(sensitivity * 100) + "%", 175, 450);
-        textCB("Rotation: " + (int)(rotation * 100), 175, 535);
+        textCB("Sensitivity: " + (int)(var.sensitivity() * 100) + "%", 175, 450);
+        textCB("Rotation: " + (int)(var.sensitivity() * 100), 175, 535);
         textCB("Elevation", 370, 150);
         textCB("Motor 1", 640, 175);
         textCB("Motor 2", 640, 315);

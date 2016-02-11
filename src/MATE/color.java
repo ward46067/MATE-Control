@@ -1,19 +1,15 @@
-package XML;
+package MATE;
 
-import static debug.log.debug;
-import java.io.File;
-
-import static util.var.*;
+import static MATE.var.*;
 import java.awt.Color;
-import java.util.ArrayList;
 
 public class color {
     public static void colorRead(){
         //File paletteFile = new File("lib\\data\\palette.xml");
         Xml palette = new Xml("palette.xml", "palette");
-        debug("Found XML");
-        debug("Loading XML");
-        debug("Palette URL: " + palette.child("url").content().trim());
+        var.log.write("Found XML");
+        var.log.write("Loading XML");
+        var.log.write("Palette URL: " + palette.child("url").content().trim());
         
         for(int i = 0; i < 4; i++){
             for(int x = 0; x < 5; x++){
@@ -22,7 +18,7 @@ public class color {
                 colorPalette[i][x][2] = palette.child("colorset" + (i+1)).child("color" + (x+1)).integer("b");
             }
         }
-        debug("Loaded XML");
+        var.log.write("Loaded XML");
     }
     
     public static void colorSet(){
@@ -44,7 +40,7 @@ public class color {
         colorButtonHover = new Color(colorPalette[2][2][0], colorPalette[2][2][1], colorPalette[2][2][2]);
         colorButtonSelected = new Color(colorPalette[2][3][0], colorPalette[2][3][1], colorPalette[2][3][2]);
         
-        debug("Set all the colors");
+        var.log.write("Set all the colors");
         
     }
 }

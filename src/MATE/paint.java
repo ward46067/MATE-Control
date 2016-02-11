@@ -1,6 +1,6 @@
-package GUI;
+package MATE;
 
-import static util.var.*;
+import static MATE.var.*;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;

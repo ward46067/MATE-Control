@@ -1,7 +1,7 @@
-package math;
+package MATE;
 
-import Math.elevation;
-import static util.var.*;
+import MATE.elevation;
+import static MATE.var.*;
 
 public class math{
     public static void math(){

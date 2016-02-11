@@ -1,4 +1,4 @@
-package XML;
+package MATE;
 
 import java.io.FileInputStream;
 import java.io.IOException;
