@@ -113,9 +113,9 @@ public class draw {
         line(175, 275 + 125*var.sensitivity(), 175 + 125*var.sensitivity(), 275);
         
         //display joystick x y
-        line(175, 275, 175 + x * 125, 275 + -z * 125);
+        line(175, 275, 175 + var.x() * 125, 275 + -z * 125);
         d.setColor(colorBarInfo);
-        d.fillOval((int)(173 + x * 125), (int)(273 + -z * 125), 5, 5); //dot
+        d.fillOval((int)(173 + var.x() * 125), (int)(273 + -z * 125), 5, 5); //dot
     }
     
     public static void rotation(){
@@ -179,19 +179,19 @@ public class draw {
         
         //debug text
         setFontSize(10);
-        textCB("Output: " + 'T' + hexOut(), 1140, 595);
+        textCB("Output: " + var.arduino.getOutput(var.output), 1140, 595);
         
         //date and time
         setFontSize(15);
-        String dateTime = var.dateTime();
+        String dateTime = var.log.dateTime();
         textLT(dateTime, 5, 20);
         
         //x
         setFontSize(10);
-        textLT("X: " + (int)(x * 100), 55, 155);
+        textLT("X: " + (int)(var.x() * 100), 55, 155);
         
         //y
-        textRT("Z: " + (int)(z * 100), 295, 155);
+        textRT("Z: " + (int)(var.z() * 100), 295, 155);
         
         //credits
         setFontSize(15);

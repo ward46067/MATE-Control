@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import robot.Arduino;
 import robot.Joystick;
 import robot.Log;
+import robot.Motor;
 
 public class var {
     //log
@@ -12,6 +13,7 @@ public class var {
     
     public static Joystick joystick;
     public static Arduino arduino;
+    public static Motor motorL, motorR, motorE;
     
     //x
     public static float x(){
@@ -31,6 +33,9 @@ public class var {
         return joystick.getSlider();
     }
     
+    public static String output(){
+        
+    }
     
     //mode 
     int defaultMode = 1;
