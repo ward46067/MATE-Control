@@ -3,13 +3,17 @@ package MATE;
 //imports
 //import Util.setup;
 
+import static MATE.var.motorE;
+import static MATE.var.motorL;
+import static MATE.var.motorR;
 import java.io.IOException;
 import robot.Arduino;
 import robot.Joystick;
 import robot.Log;
+import robot.Motor;
 
 public class main{
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("Starting");
 
         var.log = new Log("MAIN");
@@ -23,11 +27,25 @@ public class main{
         //arduino
         var.arduino = new Arduino("Arduino Uno", "COM3", 115200);
         var.arduino.connect();
+        
+        //motors
+        var.motorL = new Motor("Motor Left");
+        var.motorR = new Motor("Motor Right");
+        var.motorE = new Motor("Motor Elevation");
 
         color.colorRead();
         color.colorSet();
+        math.math();
         GUI.GUI();
         
         var.log.write("Created GUI.");
+        
+        while(true){
+            math.math();
+            GUI.pan.validate();
+            GUI.pan.repaint();
+            var.arduino.write(var.output());
+            Thread.sleep(20);
+        }
    }
 }

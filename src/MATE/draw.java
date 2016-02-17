@@ -1,7 +1,6 @@
 package MATE;
 
 import java.awt.Graphics2D;
-import static MATE.var.*;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -59,52 +58,52 @@ public class draw {
     }
     
     private static void textCB(String s, int x, int y){
-        text(s, x - (stringW(s, d)/2), y - (stringH(s, d)/3)); // /3 for better alignment
+        text(s, x - (var.stringW(s, d)/2), y - (var.stringH(s, d)/3)); // /3 for better alignment
     }
     
     private static void textLB(String s, int x,  int y){
-        text(s, x , y - (stringH(s, d)/3));
+        text(s, x , y - (var.stringH(s, d)/3));
     }
     
     private static void textCC(String s, int x, int y){
-        text(s, x - (stringW(s, d)/2), y + (stringH(s, d)/2));
+        text(s, x - (var.stringW(s, d)/2), y + (var.stringH(s, d)/2));
     }
     
     private static void textLT(String s, int x, int y){
-        text(s, x , y + (stringH(s, d)/3));
+        text(s, x , y + (var.stringH(s, d)/3));
     }
     
     private static void textRT(String s, int x, int y){
-        text(s, (x - stringW(s, d)), y + (stringH(s, d)/3));
+        text(s, (x - var.stringW(s, d)), y + (var.stringH(s, d)/3));
     }
     
     private static void drawMotor(int x, int y, double m){
         //background
-        rect(colorMotorBackground, x, y, 300, 115);
+        rect(var.colorMotorBackground, x, y, 300, 115);
         
         //speed background
-        rect(colorBarBackground, x+10, y+50, 280, 40);
+        rect(var.colorBarBackground, x+10, y+50, 280, 40);
         
         //speed bar
-        rect(colorBarInfo, x+150, y+50, (int)(m*140), 40);
+        rect(var.colorBarInfo, x+150, y+50, (int)(m*140), 40);
     }
     
     //objects
     public static void background(){
-        rect(colorBackground, 0, 0, width, height);
+        rect(var.colorBackground, 0, 0, var.width, var.height);
     }
     
     public static void title(){
-        rect(colorTitleBackground, 0, 0, width, height/6);
+        rect(var.colorTitleBackground, 0, 0, var.width, var.height/6);
     }
     
     public static void debug(){
-        rect(colorDebugBackground, 1025, 550, 175, 50);
+        rect(var.colorDebugBackground, 1025, 550, 175, 50);
     }
     
     public static void xyGraph(){
         //background
-        rect(colorBarBackground, 50, 150, 250, 250);
+        rect(var.colorBarBackground, 50, 150, 250, 250);
         
         //restraint lines
         line(175 - 125*var.sensitivity(), 275, 175, 275 - 125*var.sensitivity());
@@ -113,47 +112,47 @@ public class draw {
         line(175, 275 + 125*var.sensitivity(), 175 + 125*var.sensitivity(), 275);
         
         //display joystick x y
-        line(175, 275, 175 + var.x() * 125, 275 + -z * 125);
-        d.setColor(colorBarInfo);
-        d.fillOval((int)(173 + var.x() * 125), (int)(273 + -z * 125), 5, 5); //dot
+        line(175, 275, 175 + var.x() * 125, 275 + -var.z() * 125);
+        d.setColor(var.colorBarInfo);
+        d.fillOval((int)(173 + var.x() * 125), (int)(273 + -var.z() * 125), 5, 5); //dot
     }
     
     public static void rotation(){
         //background
-        rect(colorBarBackground, 50, 535, 250, 40);
+        rect(var.colorBarBackground, 50, 535, 250, 40);
         
         //rotation
-        rect(colorBarInfo, 175, 535, (int) (125 * rotation), 40);
+        rect(var.colorBarInfo, 175, 535, (int) (125 * var.rotation()), 40);
     }
     
     public static void sensitivity(){
         //background
-        rect(colorBarBackground, 50, 450, 250, 40);
+        rect(var.colorBarBackground, 50, 450, 250, 40);
         
         //sensitivity
-        rect(colorBarInfo, 50, 450, (int) (250 * var.sensitivity()), 40);
+        rect(var.colorBarInfo, 50, 450, (int) (250 * var.sensitivity()), 40);
         
     }
     
     public static void elevation(){
         //background
-        rect(colorBarBackground, 350, 150, 40, 250);
+        rect(var.colorBarBackground, 350, 150, 40, 250);
         
         //elevation
-        rect(colorBarInfo, 350, 275, 40, (int) (-y * 125));
+        rect(var.colorBarInfo, 350, 275, 40, (int) (-var.y * 125));
     }
     
     public static void motor(){
         //motor1
-        drawMotor(490, 150, motor1); 
+        drawMotor(490, 150, var.motorL.getValueInt()); 
         
         //motor2
-        drawMotor(490, 290, motor2);
+        drawMotor(490, 290, var.motorR.getValueInt());
     }
     
     //text
     public static void write(){
-        d.setColor(colorText);
+        d.setColor(var.colorText);
         setFontSize(18);
         
         textCB("Joystick Map", 175, 150);
@@ -164,9 +163,9 @@ public class draw {
         textCB("Motor 2", 640, 315);
         
         //motor1
-        textLB("Speed: " + (int)(motor1*100), 500, 200);
+        textLB("Speed: " + var.motorL.getValueInt(), 500, 200);
         //motor2
-        textLB("Speed: " + (int)(motor2*100), 500, 340);
+        textLB("Speed: " + var.motorR.getValueInt(), 500, 340);
         
         //title
         setFontSize(30);
@@ -174,12 +173,12 @@ public class draw {
         
         //debug title
         setFontSize(15);
-        d.setColor(colorDebugText);
+        d.setColor(var.colorDebugText);
         textCB("Debug", 1130, 575);
         
         //debug text
         setFontSize(10);
-        textCB("Output: " + var.arduino.getOutput(var.output), 1140, 595);
+        textCB("Output: " + var.arduino.getOutput(var.output()), 1140, 595);
         
         //date and time
         setFontSize(15);

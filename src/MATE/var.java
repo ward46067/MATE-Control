@@ -30,11 +30,40 @@ public class var {
     
     //sensitivity
     public static float sensitivity(){
-        return joystick.getSlider();
+        //calculate sensitivity
+        float s = joystick.getSlider();
+        s *= -1;
+        s += 1;
+        s /= 2;
+
+        if(s < minSensitivity)
+            s = (float)minSensitivity;
+
+        //boost
+        if(boost()) {
+            s = 1;
+        }
+        return s;
+    }
+    
+    public static boolean elevationButton(){
+        return joystick.getButton(1);
+    }
+    
+    public static float rotation(){
+        return joystick.getRotation();
+    }
+    
+    public static boolean boost(){
+        return joystick.getButton(0);
     }
     
     public static String output(){
-        
+        return arduino.getOutput(hexOutput());
+    }
+    
+    public static String hexOutput(){
+        return motorL.getValueHex() + motorR.getValueHex() + motorE.getValueHex();
     }
     
     //mode 
