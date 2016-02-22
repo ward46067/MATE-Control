@@ -98,7 +98,7 @@ public class draw {
     }
     
     public static void debug(){
-        rect(var.colorDebugBackground, 1025, 550, 175, 50);
+        rect(var.colorDebugBackground, 975, 550, 255, 50);
     }
     
     public static void xyGraph(){
@@ -112,9 +112,9 @@ public class draw {
         line(175, 275 + 125*var.sensitivity(), 175 + 125*var.sensitivity(), 275);
         
         //display joystick x y
-        line(175, 275, 175 + var.x() * 125, 275 + -var.z() * 125);
+        line(175, 275, 175 + var.x * 125, 275 + -var.z * 125);
         d.setColor(var.colorBarInfo);
-        d.fillOval((int)(173 + var.x() * 125), (int)(273 + -var.z() * 125), 5, 5); //dot
+        d.fillOval((int)(173 + var.x * 125), (int)(273 + -var.z * 125), 5, 5); //dot
     }
     
     public static void rotation(){
@@ -144,10 +144,10 @@ public class draw {
     
     public static void motor(){
         //motor1
-        drawMotor(490, 150, var.motorL.getValueInt()); 
+        drawMotor(490, 150, var.motorL.getValue()); 
         
         //motor2
-        drawMotor(490, 290, var.motorR.getValueInt());
+        drawMotor(490, 290, var.motorR.getValue());
     }
     
     //text
@@ -157,10 +157,10 @@ public class draw {
         
         textCB("Joystick Map", 175, 150);
         textCB("Sensitivity: " + (int)(var.sensitivity() * 100) + "%", 175, 450);
-        textCB("Rotation: " + (int)(var.sensitivity() * 100), 175, 535);
+        textCB("Rotation: " + (int)(var.rotation() * 100), 175, 535);
         textCB("Elevation", 370, 150);
-        textCB("Motor 1", 640, 175);
-        textCB("Motor 2", 640, 315);
+        textCB("Motor Left", 640, 175);
+        textCB("Motor Right", 640, 315);
         
         //motor1
         textLB("Speed: " + var.motorL.getValueInt(), 500, 200);
@@ -174,11 +174,11 @@ public class draw {
         //debug title
         setFontSize(15);
         d.setColor(var.colorDebugText);
-        textCB("Debug", 1130, 575);
+        textCB("Debug", 1100, 575);
         
         //debug text
         setFontSize(10);
-        textCB("Output: " + var.arduino.getOutput(var.output()), 1140, 595);
+        textCB("Output: " + var.arduino.getOutput(var.output()), 1130, 595);
         
         //date and time
         setFontSize(15);
@@ -187,10 +187,10 @@ public class draw {
         
         //x
         setFontSize(10);
-        textLT("X: " + (int)(var.x() * 100), 55, 155);
+        textLT("X: " + (int)(var.x * 100), 55, 155);
         
         //y
-        textRT("Z: " + (int)(var.z() * 100), 295, 155);
+        textRT("Z: " + (int)(var.z * 100), 295, 155);
         
         //credits
         setFontSize(15);

@@ -2,62 +2,65 @@ package MATE;
 
 public class math{
     public static void math(){
-        float x = var.x(), z = var.z(), m1x = 0, m1z = 0, m2x = 0, m2z = 0;
+        var.x = var.joystick.getX();
+        var.z = var.joystick.getY();
         
-        //calculate z
-        if(((x + z > 1)||(x + z < -1))||((x - z < -1)||(-x + z < -1))){
-            if(z > 0){
-                if(x > 0)
-                    z = 1 - x;
-                if(x < 0)
-                    z = x + 1;
-            } else if(z < 0){
-                if(x > 0)
-                    z = -1 + x;
-                if(x < 0)
-                    z = -1 + -x;
+        float mlx = 0, mlz = 0, mrx = 0, mrz = 0;
+        
+        //calculate var.z
+        if(((var.x + var.z > 1)||(var.x + var.z < -1))||((var.x - var.z < -1)||(-var.x + var.z < -1))){
+            if(var.z > 0){
+                if(var.x > 0)
+                    var.z = 1 - var.x;
+                if(var.x < 0)
+                    var.z = var.x + 1;
+            } else if(var.z < 0){
+                if(var.x > 0)
+                    var.z = -1 + var.x;
+                if(var.x < 0)
+                    var.z = -1 + -var.x;
             }
         }
         
         
 
         //multiply sensitivity
-        x *= var.sensitivity();
+        var.x *= var.sensitivity();
         var.y *= var.sensitivity();
-        z *= var.sensitivity();
+        var.z *= var.sensitivity();
         
-        if(x == 0){
-            m1x = 0;
-            m2x = 0;
+        if(var.x == 0){
+            mlx = 0;
+            mrx = 0;
         }
         
-        if(z == 0){
-            m1x = 0;
-            m2z = 0;
+        if(var.z == 0){
+            mlx = 0;
+            mrz = 0;
         }
         
-        if(x > 0){
-            m1x = -x;
-            m2x = x;
+        if(var.x > 0){
+            mlx = var.x;
+            mrx = -var.x;
         }
         
-        if(x < 0){
-            m1x = -x;
-            m2x = x;
+        if(var.x < 0){
+            mlx = var.x;
+            mrx = -var.x;
         }
         
-        if(z > 1){
-            m1z = z;
-            m2z = z;
+        if(var.z > 1){
+            mlz = var.z;
+            mrz = var.z;
         }
         
-        if(z < 1){
-            m1z = z;
-            m2z = z;
+        if(var.z < 1){
+            mlz = var.z;
+            mrz = var.z;
         }
         
-        var.motorL.setValue(m1x + m1z);
-        var.motorR.setValue(m2x + m2z);
+        var.motorL.setValue(mlx + mlz);
+        var.motorR.setValue(mrx + mrz);
         
         if(var.elevationButton()){
             var.y = var.rotation();

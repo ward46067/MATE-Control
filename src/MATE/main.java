@@ -25,7 +25,7 @@ public class main{
         var.joystick.connect();
         
         //arduino
-        var.arduino = new Arduino("Arduino Uno", "COM3", 115200);
+        var.arduino = new Arduino("Arduino Uno", "COM4", 115200);
         var.arduino.connect();
         
         //motors

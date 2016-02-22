@@ -15,18 +15,8 @@ public class var {
     public static Arduino arduino;
     public static Motor motorL, motorR, motorE;
     
-    //x
-    public static float x(){
-        return joystick.getX();
-    }
-    
-    //z
-    public static float z(){
-        return joystick.getY();
-    }
-    
-    //y
-    public static float y;
+    //xyz
+    public static float x, y, z;
     
     //sensitivity
     public static float sensitivity(){
