@@ -1,2 +1,0 @@
-02/20/2016 11:43:50::525 --> Connecting to the joystick.
-02/20/2016 11:43:50::525 --> ERROR: Couldn't find the joystick Logitech Extreme 3D.

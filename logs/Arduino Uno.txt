@@ -1,3 +1,3 @@
-02/22/2016 12:23:20::679 --> Connecting to the Arduino.
-02/22/2016 12:23:20::709 --> Opening the output stream.
-02/22/2016 12:23:20::812 --> Connected.
+02/25/2016 03:44:04::305 --> Connecting to the Arduino.
+02/25/2016 03:44:04::361 --> Opening the output stream.
+02/25/2016 03:44:04::465 --> Connected.

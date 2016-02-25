@@ -1,8 +1,8 @@
 package MATE;
 
-import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics2D;
 
 public class draw {
     
@@ -178,7 +178,7 @@ public class draw {
         
         //debug text
         setFontSize(10);
-        textCB("Output: " + var.arduino.getOutput(var.output()), 1130, 595);
+        textCB("Output: " + var.arduino.getOutput(var.hexOutput()), 1130, 595);
         
         //date and time
         setFontSize(15);

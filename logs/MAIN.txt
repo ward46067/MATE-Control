@@ -1,9 +1,9 @@
-02/22/2016 12:23:20::513 --> Starting.
-02/22/2016 12:23:20::513 --> Connecting to devices.
-02/22/2016 12:23:20::848 --> Found XML
-02/22/2016 12:23:20::848 --> Loading XML
-02/22/2016 12:23:20::848 --> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
-02/22/2016 12:23:20::849 --> Loaded XML
-02/22/2016 12:23:20::854 --> Set all the colors
-02/22/2016 12:23:20::859 --> Creating GUI
-02/22/2016 12:23:21::68 --> Created GUI.
+02/25/2016 03:44:04::147 --> Starting.
+02/25/2016 03:44:04::147 --> Connecting to devices.
+02/25/2016 03:44:04::516 --> Found XML
+02/25/2016 03:44:04::516 --> Loading XML
+02/25/2016 03:44:04::517 --> Palette URL: http://paletton.com/#uid=70B1b0kllllaFw0g0qFqFg0w0aF
+02/25/2016 03:44:04::517 --> Loaded XML
+02/25/2016 03:44:04::523 --> Set all the colors
+02/25/2016 03:44:04::527 --> Creating GUI
+02/25/2016 03:44:04::728 --> Created GUI.
