@@ -3,9 +3,6 @@ package MATE;
 //imports
 //import Util.setup;
 
-import static MATE.var.motorE;
-import static MATE.var.motorL;
-import static MATE.var.motorR;
 import java.io.IOException;
 import robot.Arduino;
 import robot.Joystick;
@@ -25,7 +22,7 @@ public class main{
         var.joystick.connect();
         
         //arduino
-        var.arduino = new Arduino("Arduino Uno", "COM4", 115200);
+        var.arduino = new Arduino("Arduino Uno", "COM5", 115200);
         var.arduino.connect();
         
         //motors
