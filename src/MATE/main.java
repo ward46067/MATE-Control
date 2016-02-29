@@ -22,7 +22,7 @@ public class main{
         var.joystick.connect();
         
         //arduino
-        var.arduino = new Arduino("Arduino Uno", "COM5", 115200);
+        var.arduino = new Arduino("Arduino Uno", 115200);
         var.arduino.connect();
         
         //motors
@@ -41,8 +41,9 @@ public class main{
             math.math();
             GUI.pan.validate();
             GUI.pan.repaint();
+            //System.out.println(var.output());
             var.arduino.write(var.output());
-            Thread.sleep(20);
+            Thread.sleep(20); 
         }
    }
 }

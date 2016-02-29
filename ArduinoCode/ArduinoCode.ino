@@ -9,6 +9,8 @@ void setup() {
     s[i].attach(i+2);
   }
   delay(1000); // for ESCs
+  s[0].writeMicroseconds(1860);
+  s[1].writeMicroseconds(1860);
   Serial.begin(115200);
 }
 

@@ -1,14 +1,14 @@
-02/25/2016 03:44:04::299 --> Connecting to the joystick.
-02/25/2016 03:44:04::300 --> Found a controller called HID Keyboard Device.
-02/25/2016 03:44:04::300 --> Found a controller called Standard PS/2 Keyboard.
-02/25/2016 03:44:04::300 --> Found a controller called Dell Touchpad.
-02/25/2016 03:44:04::300 --> Found a controller called PS/2 Compatible Mouse.
-02/25/2016 03:44:04::301 --> Found a controller called HID-compliant mouse.
-02/25/2016 03:44:04::301 --> Found a controller called Touchscreen.
-02/25/2016 03:44:04::301 --> Found a controller called Touchscreen.
-02/25/2016 03:44:04::302 --> Found a controller called Airplane Mode Switch.
-02/25/2016 03:44:04::302 --> Found a controller called Logitech Extreme 3D.
-02/25/2016 03:44:04::302 --> Found the joystick Logitech Extreme 3D.
-02/25/2016 03:44:04::302 --> Beginning poll loop.
-02/25/2016 03:44:04::303 --> Succesfully created poll loop.
-02/25/2016 03:44:19::264 --> ERROR: POLL: Disconnected from Logitech Extreme 3D.
+02/26/2016 12:58:29::915 --> Connecting to the joystick.
+02/26/2016 12:58:29::915 --> Found a controller called HID Keyboard Device.
+02/26/2016 12:58:29::916 --> Found a controller called Standard PS/2 Keyboard.
+02/26/2016 12:58:29::916 --> Found a controller called Dell Touchpad.
+02/26/2016 12:58:29::916 --> Found a controller called PS/2 Compatible Mouse.
+02/26/2016 12:58:29::917 --> Found a controller called HID-compliant mouse.
+02/26/2016 12:58:29::917 --> Found a controller called Touchscreen.
+02/26/2016 12:58:29::917 --> Found a controller called Touchscreen.
+02/26/2016 12:58:29::918 --> Found a controller called Airplane Mode Switch.
+02/26/2016 12:58:29::918 --> Found a controller called Logitech Extreme 3D.
+02/26/2016 12:58:29::918 --> Found the joystick Logitech Extreme 3D.
+02/26/2016 12:58:29::919 --> Beginning poll loop.
+02/26/2016 12:58:29::920 --> Succesfully created poll loop.
+02/26/2016 12:58:34::469 --> ERROR: POLL: Disconnected from Logitech Extreme 3D.

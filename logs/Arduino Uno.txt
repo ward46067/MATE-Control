@@ -1,3 +1,2 @@
-02/25/2016 03:44:04::305 --> Connecting to the Arduino.
-02/25/2016 03:44:04::361 --> Opening the output stream.
-02/25/2016 03:44:04::465 --> Connected.
+02/26/2016 12:58:29::923 --> Connecting to the Arduino.
+02/26/2016 12:58:29::947 --> ERROR: Couldn't find the Arduino Arduino Uno.
