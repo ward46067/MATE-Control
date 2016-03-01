@@ -1,2 +1,5 @@
-02/26/2016 12:58:29::923 --> Connecting to the Arduino.
-02/26/2016 12:58:29::947 --> ERROR: Couldn't find the Arduino Arduino Uno.
+03/01/2016 03:49:55::878 --> Connecting to the Arduino.
+03/01/2016 03:49:55::898 --> Listing port options
+03/01/2016 03:49:55::898 --> COM5 - Serial
+03/01/2016 03:49:55::914 --> Opening the output stream.
+03/01/2016 03:49:56::16 --> Connected.

@@ -63,7 +63,7 @@ public class math{
         var.motorR.setValue(mrx + mrz);
         
         if(var.elevationButton()){
-            var.y = var.rotation();
+            var.y = var.rotation() * var.sensitivity();
         } else {
             var.y = 0;
         }

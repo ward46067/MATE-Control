@@ -42,7 +42,9 @@ public class main{
             GUI.pan.validate();
             GUI.pan.repaint();
             //System.out.println(var.output());
-            var.arduino.write(var.output());
+            var.arduino.write(var.hexOutput());
+            System.out.println(var.output());
+            //System.out.println(var.motorE.getValueHex());
             Thread.sleep(20); 
         }
    }

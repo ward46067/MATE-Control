@@ -53,7 +53,7 @@ public class var {
     }
     
     public static String hexOutput(){
-        return motorL.getValueHex() + motorR.getValueHex() + motorE.getValueHex();
+        return "" + motorL.getValueHex() + motorR.getValueHex() + motorE.getValueHex();
     }
     
     //mode 

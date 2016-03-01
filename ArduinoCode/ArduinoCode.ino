@@ -7,10 +7,11 @@ char buffer[25];
 void setup() {
   for(int i = 0; i < 12; i++){
     s[i].attach(i+2);
+    //s[i].write(0);
   }
   delay(1000); // for ESCs
-  s[0].writeMicroseconds(1860);
-  s[1].writeMicroseconds(1860);
+  //s[0].writeMicroseconds(1460);
+  //s[1].writeMicroseconds(1460);
   Serial.begin(115200);
 }
 
@@ -20,10 +21,10 @@ void loop() {
     if(buffer[0] == 'T'){
 
       //ESCs
-      s[0].writeMicroseconds(i2ms((hex2dec(buffer[0]) * 16) + hex2dec(buffer[1])));
-      s[1].writeMicroseconds(i2ms((hex2dec(buffer[2]) * 16) + hex2dec(buffer[3])));
+      //s[0].writeMicroseconds(i2ms((hex2dec(buffer[0]) * 16) + hex2dec(buffer[1])));
+      //s[1].writeMicroseconds(i2ms((hex2dec(buffer[2]) * 16) + hex2dec(buffer[3])));
       
-      for(int i = 2; i < 12; i++){
+      for(int i = 0; i < 12; i++){
         int b = i * 2;
         b = b+1;
         s[i].write((hex2dec(buffer[b]) * 16) + hex2dec(buffer[b+1]));
