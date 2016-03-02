@@ -15,7 +15,8 @@ public class cam {
         var.cameraPanel.setDisplayDebugInfo(true);
         var.cameraPanel.setImageSizeDisplayed(true);
         var.cameraPanel.setMirrored(true);
-        var.cameraPanel.setSize(320, 240);
+        //var.cameraPanel.setSize(320, 240);
+        
         //var.cameraPanel.setBorder(BorderFactory.createEmptyBorder(220, 0, 220, 0));
         
     }
