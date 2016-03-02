@@ -1,5 +1,7 @@
 package MATE;
 
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import robot.Arduino;
@@ -96,5 +98,7 @@ public class var {
         return (int) d.getFontMetrics().getStringBounds(text, d).getHeight();
     }
     
+    public static Webcam camera;
+    public static WebcamPanel cameraPanel;
     
 }

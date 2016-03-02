@@ -1,5 +1,0 @@
-03/01/2016 03:49:55::878 --> Connecting to the Arduino.
-03/01/2016 03:49:55::898 --> Listing port options
-03/01/2016 03:49:55::898 --> COM5 - Serial
-03/01/2016 03:49:55::914 --> Opening the output stream.
-03/01/2016 03:49:56::16 --> Connected.
