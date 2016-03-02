@@ -25,16 +25,17 @@ public class GUI {
         //gui.getContentPane().add(new paint()); //needed
         gui.setSize(var.width, var.height + 30);
         gui.setVisible(true);
-        gui.setResizable(false);
+        gui.setResizable(true);
         gui.show();
         gui.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         //draw frame
         drawFrame = new JInternalFrame("draw");
-        drawFrame.setSize(var.width, var.height+30);
+        drawFrame.setSize(var.width, var.height + 50);
         drawFrame.setVisible(true);
         drawFrame.setResizable(true);
         drawFrame.show();
+        drawFrame.pack();
         drawFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         drawFrame.getContentPane().add(new paint());
@@ -44,7 +45,7 @@ public class GUI {
         camFrame = new JInternalFrame("cam");
         camFrame.setSize(320, 240);
         camFrame.setVisible(true);
-        camFrame.setResizable(false);
+        camFrame.setResizable(true);
         camFrame.show();
         
         //create panels
@@ -57,7 +58,7 @@ public class GUI {
         //add panels
         gui.add(panel);
         
-        panel.add(drawFrame, BorderLayout.WEST);
+        panel.add(drawFrame);
         panel.add(camPanel, BorderLayout.EAST);
         
         camPanel.add(camTop, BorderLayout.LINE_START);
