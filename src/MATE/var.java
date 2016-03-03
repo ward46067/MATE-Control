@@ -18,7 +18,7 @@ public class var {
     public static Motor motorL, motorR, motorE;
     
     //xyz
-    public static float x, y, z;
+    public static float x = 0, y = 0, z = 0;
     
     //sensitivity
     public static float sensitivity(){

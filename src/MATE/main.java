@@ -17,12 +17,14 @@ public class main{
         
         while(true){
             math.math();
-            GUI.draw.validate();
-            GUI.draw.repaint();
+            //GUI.draw.validate();
+            //GUI.draw.repaint();
             //System.out.println(var.output());
             var.arduino.write(var.hexOutput());
-            System.out.println(var.output());
+            //System.out.println(var.output());
             //System.out.println(var.motorE.getValueHex());
+            
+            GUI.redraw();
             Thread.sleep(20); 
         }
    }
