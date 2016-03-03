@@ -31,10 +31,14 @@ public class GUI {
             leftTop,
             leftBottom,
             rightTop,
-            rightBottom;
+            rightBottom,
+            mlpanel,
+            mrpanel,
+            mepanel;
     private static JProgressBar sens, 
-            rot,
-            motorl,
+            rotp,
+            rotm,
+            motorml,
             motorr,
             motore;
     
@@ -42,7 +46,7 @@ public class GUI {
         var.log.write("Creating GUI");
         
         //create main frame 
-        createGUI();
+        cGUI();
        
         //initialize panels
         initializePanels();
@@ -54,7 +58,7 @@ public class GUI {
         drawGUI();
     }
     
-    private static void createGUI(){
+    private static void cGUI(){
         gui = new JFrame("MATE Control");
         gui.setTitle("MATE Controller");
         gui.setSize(1300, 600);
@@ -76,9 +80,9 @@ public class GUI {
         leftTop = new JPanel();
         leftBottom = new JPanel(new BorderLayout());
         
-        createXYGraph();
-        createRotation();
-        createSensitivity();
+        cXYGraph();
+        cRotation();
+        cSensitivity();
         
         //camera
         camera = new JPanel();
@@ -114,7 +118,7 @@ public class GUI {
         rotpanel.add(rot);
     }
     
-    private static void createXYGraph(){
+    private static void cXYGraph(){
         Dimension d = new Dimension(200, 200);
         
         //panel
@@ -147,19 +151,20 @@ public class GUI {
         g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100, 100 + ((int)(100*var.sensitivity())));
         g.drawLine(100, 100 + ((int)(100*var.sensitivity())), 100 + ((int)(100*var.sensitivity())), 100);
         
-        g.fillOval(x, y, 5, 5);
+        g.fillOval(x + 100, -y + 100, 5, 5);
         
     }
     
-    private static void createRotation(){
+    private static void cRotation(){
         rotpanel = new JPanel(new FlowLayout());
         rotpanel.setBorder(titledBorder("Rotation"));
         
-        rot = new JProgressBar(0, 100);
+        rotp = new JProgressBar(0, 50);
+        rotm = new JProgressBar()
         
     }
     
-    private static void createSensitivity(){
+    private static void cSensitivity(){
         senspanel = new JPanel(new FlowLayout());
         senspanel.setBorder(titledBorder("Sensitivity"));
         
@@ -170,7 +175,7 @@ public class GUI {
     public static void redraw(){
         drawXYGraph();
         
-        rot.setValue((int) (var.rotation()*100));
+        rotp.setValue((int) (var.rotation()*50) + 50);
         sens.setValue((int) (var.sensitivity()*100));
     }
     
