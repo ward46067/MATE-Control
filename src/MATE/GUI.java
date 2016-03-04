@@ -115,7 +115,7 @@ public class GUI {
         
         xypanel.add(xygraph);
         senspanel.add(sens);
-        rotpanel.add(rot);
+        rotpanel.add(rotp);
     }
     
     private static void cXYGraph(){
@@ -146,13 +146,19 @@ public class GUI {
         
         
         //restraint lines
-        g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100, 100 - ((int)(var.sensitivity()*100)));
-        g.drawLine(100, 100 - ((int)(100*var.sensitivity())), 100 + ((int)(100*var.sensitivity())), 100);
-        g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100, 100 + ((int)(100*var.sensitivity())));
-        g.drawLine(100, 100 + ((int)(100*var.sensitivity())), 100 + ((int)(100*var.sensitivity())), 100);
+        g.setColor(Color.red);
+        g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100, 100 - ((int)(var.sensitivity()*100))); //top left
+        g.drawLine(100, 100 - ((int)(100*var.sensitivity())), 100 + ((int)(100*var.sensitivity())), 100); //top right
+        g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100, 100 + ((int)(100*var.sensitivity()))); //bottom left
+        g.drawLine(100, 100 + ((int)(100*var.sensitivity())), 100 + ((int)(100*var.sensitivity())), 100); //bottom right
         
+        //point
+        g.setColor(Color.black);
         g.fillOval(x + 100, -y + 100, 5, 5);
         
+        //cross lines
+        g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100 + ((int)(100*var.sensitivity())), 100);
+        g.drawLine(100, 100 - ((int)(100*var.sensitivity())), 100, 100 + ((int)(100*var.sensitivity())));
     }
     
     private static void cRotation(){
@@ -160,7 +166,7 @@ public class GUI {
         rotpanel.setBorder(titledBorder("Rotation"));
         
         rotp = new JProgressBar(0, 50);
-        rotm = new JProgressBar()
+        //rotm = new JProgressBar()
         
     }
     
