@@ -28,7 +28,6 @@ public class GUI {
             senspanel, 
             infoRight,
             infoLeft,
-            infoMid,
             leftTop,
             leftBottom,
             rightTop,
@@ -40,11 +39,12 @@ public class GUI {
     private static JProgressBar sensb, 
             rotb,
             elevb,
-            motorml,
-            motorr,
-            motore;
+            motorrb,
+            motorlb;
     private static JLabel senstxt,
-            rottxt;
+            rottxt, 
+            mrSpeed,
+            mlSpeed;
     private static Color darkGreen;
     
     public static void GUI(){ 
@@ -69,9 +69,9 @@ public class GUI {
     private static void cGUI(){
         gui = new JFrame("MATE Control");
         gui.setTitle("MATE Controller");
-        gui.setSize(1300, 600);
+        gui.setSize(1200, 600);
         gui.setVisible(true);
-        gui.setResizable(false); //has to be false for some reason
+        gui.setResizable(true); //has to be false for some reason
         gui.show();
         gui.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -81,19 +81,24 @@ public class GUI {
         panel = new JPanel(new BorderLayout());
         
         data = new JPanel(new FlowLayout());
-        title = new JPanel(new FlowLayout());
+        title = new JPanel();
         info = new JPanel(new FlowLayout());
         
         infoLeft = new JPanel(new BorderLayout());
-        infoMid = new JPanel(new BorderLayout());
+        infoRight = new JPanel(new BorderLayout());
         
-        leftTop = new JPanel();
+        leftTop = new JPanel(new BorderLayout());
         leftBottom = new JPanel(new BorderLayout());
+        
+        rightTop = new JPanel(new BorderLayout());
+        rightBottom = new JPanel(new BorderLayout());
         
         cXYGraph();
         cRotation();
         cSensitivity();
         cElevation();
+        cMotorL();
+        cMotorR();
         
         //camera
         camera = new JPanel();
@@ -110,8 +115,8 @@ public class GUI {
     private static void drawGUI(){
         gui.add(panel);
         
-        panel.add(title, BorderLayout.NORTH);
-        panel.add(data, BorderLayout.CENTER);
+        panel.add(title, BorderLayout.CENTER);
+        panel.add(data, BorderLayout.SOUTH);
         
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
@@ -119,10 +124,12 @@ public class GUI {
         //camera.add(var.cameraPanel);
         
         info.add(infoLeft, FlowLayout.LEFT);
-        info.add(infoMid);
+        info.add(infoRight);
         
         infoLeft.add(leftTop, BorderLayout.NORTH);
         infoLeft.add(leftBottom, BorderLayout.SOUTH);
+        
+        infoRight.add(rightTop);
         
         leftTop.add(xypanel);
         
@@ -130,11 +137,8 @@ public class GUI {
         leftBottom.add(rotpanel, BorderLayout.CENTER);
         leftBottom.add(elevpanel, BorderLayout.SOUTH);
         
-        xypanel.add(xygraph);
-        senspanel.add(sensb);
-        //rotpanel.add(rottxt);
-        rotpanel.add(rotb);
-        elevpanel.add(elevb);
+        rightTop.add(mlpanel, BorderLayout.NORTH);
+        rightTop.add(mrpanel, BorderLayout.SOUTH);
     }
     
     private static void cXYGraph(){
@@ -154,6 +158,7 @@ public class GUI {
         
         xygraph.setBorder(BorderFactory.createLineBorder(Color.black));
         
+        xypanel.add(xygraph);
     }
     
     private static void drawXYGraph(){
@@ -180,14 +185,27 @@ public class GUI {
         g.drawLine(100, 100 - ((int)(100*var.sensitivity())), 100, 100 + ((int)(100*var.sensitivity())));
     }
     
+    private static void drawTitle(){
+        int w = title.getWidth(), h = title.getHeight();
+        
+        Graphics2D g = (Graphics2D) title.getGraphics();
+        //g.clearRect(0, 0, w, h);
+        
+        //bottom border
+        g.drawLine(0, h, w, h);
+        
+        g.setColor(Color.black);
+        g.drawString("MATE Control", 0, 0);
+    }
+    
     private static void cRotation(){
         rotpanel = new JPanel(new FlowLayout());
         rotpanel.setBorder(titledBorder("Rotation"));
         
-        rotb = new JProgressBar(0, 50);
+        rotb = new JProgressBar(0, 100);
         //rottxt = new JLabel("" + ((var.joystick.getRotation() * 90) + 90));
         //rotm = new JProgressBar()
-        
+        rotpanel.add(rotb);
     }
     
     private static void cSensitivity(){
@@ -196,21 +214,58 @@ public class GUI {
         
         sensb = new JProgressBar(0, 100);
         sensb.setForeground(darkGreen);
+        
+        senspanel.add(sensb);
     }
     
     private static void cElevation(){
         elevpanel = new JPanel(new FlowLayout());
         elevpanel.setBorder(titledBorder("Elevation"));
         
-        elevb = new JProgressBar(0, 50);
+        elevb = new JProgressBar(0, 100);
+        
+        elevpanel.add(elevb);
+    }
+    
+    private static void cMotorL(){
+        mlpanel = new JPanel(new BorderLayout());
+        mlpanel.setBorder(titledBorder("Motor Left"));
+        
+        mlSpeed = new JLabel();
+        
+        motorlb = new JProgressBar(0, 100);
+        
+        mlpanel.add(mlSpeed, BorderLayout.NORTH);
+        mlpanel.add(motorlb);
+    }
+    
+    private static void cMotorR(){
+        mrpanel = new JPanel(new BorderLayout());
+        mrpanel.setBorder(titledBorder("Motor Right"));
+        
+        mrSpeed = new JLabel();
+        
+        motorrb = new JProgressBar(0, 100);
+        
+        mrpanel.add(mrSpeed, BorderLayout.NORTH);
+        mrpanel.add(motorrb);
     }
     
     public static void redraw(){
         drawXYGraph();
+        drawTitle();
         
         colorBar(rotb, var.joystick.getRotation());
         sensb.setValue((int) (var.sensitivity()*100));
-        colorBar(elevb, var.joystick.getRotation());
+        colorBar(elevb, var.motorE.getValue());
+        
+        //left motor
+        mlSpeed.setText("Speed: " + var.motorL.getValueInt());
+        motorlb.setValue((var.motorL.getValueInt()/2) + 50);
+        
+        //right motor
+        mrSpeed.setText("Speed: " + var.motorR.getValueInt());
+        motorrb.setValue((var.motorR.getValueInt()/2) + 50);
     }
     
     private static Border titledBorder(String n){
@@ -218,12 +273,14 @@ public class GUI {
     }
     
     private static void colorBar(JProgressBar bar, float num){
-        if(num >= 0){
+        if(num >= 0.5){
             bar.setForeground(darkGreen);
         } else {
             bar.setForeground(Color.red);
         }
         
-        bar.setValue((int) ((num + 1)*25));
+        bar.setValue((int) ((num)*100));
+        bar.setToolTipText("" + num);
+        
     }
 }

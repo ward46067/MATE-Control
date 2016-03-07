@@ -7,7 +7,7 @@ import java.awt.Dimension;
 public class cam {
     public static void setup(){
         //var.camera = Webcam.getDefault();
-        
+        Webcam.setAutoOpenMode(true);
         for(int i = 0; i < Webcam.getWebcams().size(); i++){
             System.out.println(Webcam.getWebcams().get(i).getDevice().getName());
             if(Webcam.getWebcams().get(i).getName().equals("USB 2.0 PC Cam 1")){
@@ -16,9 +16,11 @@ public class cam {
             }
         }
         
-        if(var.camera == null){
-            var.camera = Webcam.getDefault();
-        }
+        System.out.println(var.camera.getName());
+        
+        
+        System.out.println("Open?: " + var.camera.isOpen());
+        
         //var.camera.setViewSize(WebcamResolution.VGA.getSize());
         var.camera.setViewSize(new Dimension(320, 240));
         

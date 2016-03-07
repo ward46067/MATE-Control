@@ -10,7 +10,7 @@ public class setup {
         
         //joystick
         var.joystick = new Joystick("Logitech Extreme 3D");
-        //var.joystick.connect();
+        var.joystick.connect();
         
         //arduino
         var.arduino = new Arduino("Arduino Uno", 115200);
