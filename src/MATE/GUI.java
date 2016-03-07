@@ -8,6 +8,7 @@ import java.awt.Graphics2D;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.*;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.border.Border;
@@ -34,16 +35,23 @@ public class GUI {
             rightBottom,
             mlpanel,
             mrpanel,
-            mepanel;
-    private static JProgressBar sens, 
-            rotp,
-            rotm,
+            mepanel,
+            elevpanel;
+    private static JProgressBar sensb, 
+            rotb,
+            elevb,
             motorml,
             motorr,
             motore;
+    private static JLabel senstxt,
+            rottxt;
+    private static Color darkGreen;
     
     public static void GUI(){ 
         var.log.write("Creating GUI");
+        
+        //create colors
+        ccolor();
         
         //create main frame 
         cGUI();
@@ -77,12 +85,15 @@ public class GUI {
         info = new JPanel(new FlowLayout());
         
         infoLeft = new JPanel(new BorderLayout());
+        infoMid = new JPanel(new BorderLayout());
+        
         leftTop = new JPanel();
         leftBottom = new JPanel(new BorderLayout());
         
         cXYGraph();
         cRotation();
         cSensitivity();
+        cElevation();
         
         //camera
         camera = new JPanel();
@@ -90,6 +101,10 @@ public class GUI {
     
     private static void initializeText(){
         
+    }
+    
+    private static void ccolor(){
+        darkGreen = new Color(0, 153, 0);
     }
     
     private static void drawGUI(){
@@ -101,9 +116,10 @@ public class GUI {
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
         
-        camera.add(var.cameraPanel);
+        //camera.add(var.cameraPanel);
         
         info.add(infoLeft, FlowLayout.LEFT);
+        info.add(infoMid);
         
         infoLeft.add(leftTop, BorderLayout.NORTH);
         infoLeft.add(leftBottom, BorderLayout.SOUTH);
@@ -111,11 +127,14 @@ public class GUI {
         leftTop.add(xypanel);
         
         leftBottom.add(senspanel, BorderLayout.NORTH);
-        leftBottom.add(rotpanel, BorderLayout.SOUTH);
+        leftBottom.add(rotpanel, BorderLayout.CENTER);
+        leftBottom.add(elevpanel, BorderLayout.SOUTH);
         
         xypanel.add(xygraph);
-        senspanel.add(sens);
-        rotpanel.add(rotp);
+        senspanel.add(sensb);
+        //rotpanel.add(rottxt);
+        rotpanel.add(rotb);
+        elevpanel.add(elevb);
     }
     
     private static void cXYGraph(){
@@ -165,7 +184,8 @@ public class GUI {
         rotpanel = new JPanel(new FlowLayout());
         rotpanel.setBorder(titledBorder("Rotation"));
         
-        rotp = new JProgressBar(0, 50);
+        rotb = new JProgressBar(0, 50);
+        //rottxt = new JLabel("" + ((var.joystick.getRotation() * 90) + 90));
         //rotm = new JProgressBar()
         
     }
@@ -174,18 +194,36 @@ public class GUI {
         senspanel = new JPanel(new FlowLayout());
         senspanel.setBorder(titledBorder("Sensitivity"));
         
-        sens = new JProgressBar(0, 100);
+        sensb = new JProgressBar(0, 100);
+        sensb.setForeground(darkGreen);
+    }
+    
+    private static void cElevation(){
+        elevpanel = new JPanel(new FlowLayout());
+        elevpanel.setBorder(titledBorder("Elevation"));
         
+        elevb = new JProgressBar(0, 50);
     }
     
     public static void redraw(){
         drawXYGraph();
         
-        rotp.setValue((int) (var.rotation()*50) + 50);
-        sens.setValue((int) (var.sensitivity()*100));
+        colorBar(rotb, var.joystick.getRotation());
+        sensb.setValue((int) (var.sensitivity()*100));
+        colorBar(elevb, var.joystick.getRotation());
     }
     
     private static Border titledBorder(String n){
         return BorderFactory.createTitledBorder(null, n, TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, new Color(0, 0, 0));
+    }
+    
+    private static void colorBar(JProgressBar bar, float num){
+        if(num >= 0){
+            bar.setForeground(darkGreen);
+        } else {
+            bar.setForeground(Color.red);
+        }
+        
+        bar.setValue((int) ((num + 1)*25));
     }
 }
