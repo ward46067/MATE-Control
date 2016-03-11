@@ -23,8 +23,8 @@ public class setup {
 
         //cam.setup();
         
-        color.colorRead();
-        color.colorSet();
+        //color.colorRead();
+        //color.colorSet();
         math.math();
         GUI.GUI();
         

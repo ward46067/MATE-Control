@@ -24,6 +24,7 @@ public class GUI {
             xygraph, 
             xypanel, 
             title, 
+            dTitle,
             rotpanel, 
             senspanel, 
             infoRight,
@@ -35,7 +36,11 @@ public class GUI {
             mlpanel,
             mrpanel,
             mepanel,
-            elevpanel;
+            elevpanel,
+            bottom,
+            dBottom,
+            hspanel,
+            hatswitch;
     private static JProgressBar sensb, 
             rotb,
             elevb,
@@ -81,7 +86,6 @@ public class GUI {
         panel = new JPanel(new BorderLayout());
         
         data = new JPanel(new FlowLayout());
-        title = new JPanel();
         info = new JPanel(new FlowLayout());
         
         infoLeft = new JPanel(new BorderLayout());
@@ -93,12 +97,15 @@ public class GUI {
         rightTop = new JPanel(new BorderLayout());
         rightBottom = new JPanel(new BorderLayout());
         
+        cTitle();
         cXYGraph();
         cRotation();
         cSensitivity();
         cElevation();
         cMotorL();
         cMotorR();
+        cBottom();
+        cHatSwitch();
         
         //camera
         camera = new JPanel();
@@ -115,8 +122,9 @@ public class GUI {
     private static void drawGUI(){
         gui.add(panel);
         
-        panel.add(title, BorderLayout.CENTER);
-        panel.add(data, BorderLayout.SOUTH);
+        //panel.add(title, BorderLayout.NORTH);
+        panel.add(data, BorderLayout.CENTER);
+        //panel.add(bottom, BorderLayout.SOUTH);
         
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
@@ -138,7 +146,10 @@ public class GUI {
         leftBottom.add(elevpanel, BorderLayout.SOUTH);
         
         rightTop.add(mlpanel, BorderLayout.NORTH);
-        rightTop.add(mrpanel, BorderLayout.SOUTH);
+        rightTop.add(mrpanel, BorderLayout.CENTER);
+        rightTop.add(hspanel, BorderLayout.SOUTH);
+        
+        
     }
     
     private static void cXYGraph(){
@@ -178,24 +189,40 @@ public class GUI {
         
         //point
         g.setColor(Color.black);
-        g.fillOval(x + 100, -y + 100, 5, 5);
+        g.fillOval((x-2) + 100, (-y-2) + 100, 4, 4);
         
         //cross lines
         g.drawLine(100 - ((int)(100*var.sensitivity())), 100, 100 + ((int)(100*var.sensitivity())), 100);
         g.drawLine(100, 100 - ((int)(100*var.sensitivity())), 100, 100 + ((int)(100*var.sensitivity())));
     }
     
-    private static void drawTitle(){
-        int w = title.getWidth(), h = title.getHeight();
+    private static void cTitle(){
+        title = new JPanel(new FlowLayout());
+        dTitle = new JPanel(new FlowLayout());
         
-        Graphics2D g = (Graphics2D) title.getGraphics();
-        //g.clearRect(0, 0, w, h);
+        Dimension d = new Dimension(200, 200);
+        
+        dTitle.setMaximumSize(d);
+        dTitle.setMinimumSize(d);
+        dTitle.setPreferredSize(d);
+        
+        title.add(dTitle);
+    }
+    
+    private static void drawTitle(){
+        int w = dTitle.getWidth(), h = dTitle.getHeight();
+        
+        Graphics2D g = (Graphics2D) dTitle.getGraphics();
+        g.clearRect(0, 0, w, h);
         
         //bottom border
-        g.drawLine(0, h, w, h);
+        //g.drawLine(0, h, w, h);
         
-        g.setColor(Color.black);
-        g.drawString("MATE Control", 0, 0);
+        
+        g.setColor(Color.red);
+        g.drawRect(0, 0, w, h);
+        g.drawString("MATE Control", 100, 100);
+        
     }
     
     private static void cRotation(){
@@ -251,9 +278,103 @@ public class GUI {
         mrpanel.add(motorrb);
     }
     
+    private static void cBottom(){
+        bottom = new JPanel(new FlowLayout());
+        dBottom = new JPanel(new FlowLayout());
+        
+        Dimension d = new Dimension(200, 50);
+        
+        bottom.setPreferredSize(d);
+        
+        bottom.add(dBottom);
+    }
+    
+    private static void drawBottom(){
+        
+    }
+    
+    private static void cHatSwitch(){
+        Dimension d = new Dimension(200, 200);
+        
+        hspanel = new JPanel(new FlowLayout());
+        hatswitch = new JPanel(new FlowLayout());
+        
+        hspanel.setBorder(titledBorder("Hat Switch"));
+        hspanel.setPreferredSize(d);
+        
+        hatswitch.setPreferredSize(d);
+        
+        //hatswitch.setBorder(BorderFactory.createLineBorder(Color.black));
+        
+        hspanel.add(hatswitch);
+    }
+    
+    private static void drawHS(){
+        Graphics2D g = (Graphics2D)hatswitch.getGraphics();
+        
+        int circleSize = 100;
+        
+        int smallCircleSize = 10;
+        int upCircleX = 65;
+        int upCircleY = 17;
+        int leftCircleX = 15;
+        int leftCircleY = 68;
+        int betweenX = 37;
+        int betweenY = 17;
+        
+        int x = 0;
+        int y = 0;
+        
+        g.clearRect(5, 15, hatswitch.getWidth() - 10, hatswitch.getHeight() - 22);
+        
+        g.setColor(Color.BLACK);
+        g.setBackground(darkGreen);
+        g.drawOval(20, 22, circleSize, circleSize);
+        
+        g.setColor(Color.blue);
+        
+        //up
+        if(var.joystick.getHatSwitch()[1]){
+            x = upCircleX;
+            y = upCircleY;
+        //down
+        }else if(var.joystick.getHatSwitch()[5]){
+            x = upCircleX;
+            y = upCircleY + circleSize;
+        //left
+        }else if(var.joystick.getHatSwitch()[7]){
+            x = leftCircleX;
+            y = leftCircleY;
+        //right
+        }else if(var.joystick.getHatSwitch()[3]){
+            x = leftCircleX + circleSize;
+            y = leftCircleY;
+        //up left
+        }else if(var.joystick.getHatSwitch()[8]){
+            x = upCircleX - betweenX;
+            y = upCircleY + betweenY;
+        //up right
+        }else if(var.joystick.getHatSwitch()[2]){
+            x = upCircleX + betweenX;
+            y = upCircleY + betweenY;
+        //down left
+        }else if(var.joystick.getHatSwitch()[6]){
+            x = upCircleX - betweenX;
+            y = upCircleY + circleSize - betweenY;
+        //down right
+        }else if(var.joystick.getHatSwitch()[4]){
+            x = upCircleX + betweenX;
+            y = upCircleY + circleSize - betweenY;
+        }
+        
+        g.fillOval(x, y, smallCircleSize, smallCircleSize);
+    }
+    
     public static void redraw(){
+        //drawTitle();
         drawXYGraph();
-        drawTitle();
+        drawHS();
+        
         
         colorBar(rotb, var.joystick.getRotation());
         sensb.setValue((int) (var.sensitivity()*100));
@@ -266,6 +387,8 @@ public class GUI {
         //right motor
         mrSpeed.setText("Speed: " + var.motorR.getValueInt());
         motorrb.setValue((var.motorR.getValueInt()/2) + 50);
+        
+        
     }
     
     private static Border titledBorder(String n){
@@ -279,7 +402,7 @@ public class GUI {
             bar.setForeground(Color.red);
         }
         
-        bar.setValue((int) ((num)*100));
+        bar.setValue((int) ((num + 1)*50));
         bar.setToolTipText("" + num);
         
     }

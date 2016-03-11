@@ -5,6 +5,8 @@ public class math{
         var.x = var.joystick.getX();
         var.z = var.joystick.getY();
         
+        double snapPoint = var.sensitivity() - 0.85;
+        
         float mlx = 0, mlz = 0, mrx = 0, mrz = 0;
         
         //calculate var.z
@@ -22,7 +24,14 @@ public class math{
             }
         }
         
+        //snapping
+        if(Math.abs(var.x) <= snapPoint){
+            var.x = 0;
+        }
         
+        if(Math.abs(var.z) <= snapPoint){
+            var.z = 0;
+        }
 
         //multiply sensitivity
         var.x *= var.sensitivity();
