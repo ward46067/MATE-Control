@@ -64,9 +64,6 @@ public class GUI {
         //initialize panels
         initializePanels();
         
-        //initialize text
-        initializeText();
-        
         //add panels to frame
         drawGUI();
     }
@@ -109,10 +106,6 @@ public class GUI {
         
         //camera
         camera = new JPanel();
-    }
-    
-    private static void initializeText(){
-        
     }
     
     private static void ccolor(){
@@ -302,7 +295,7 @@ public class GUI {
         hspanel.setBorder(titledBorder("Hat Switch"));
         hspanel.setPreferredSize(d);
         
-        hatswitch.setPreferredSize(d);
+        hatswitch.setPreferredSize(new Dimension(150, 150));
         
         //hatswitch.setBorder(BorderFactory.createLineBorder(Color.black));
         
@@ -325,49 +318,51 @@ public class GUI {
         int x = 0;
         int y = 0;
         
-        g.clearRect(5, 15, hatswitch.getWidth() - 10, hatswitch.getHeight() - 22);
+        g.clearRect(25, 15, hatswitch.getWidth() - 10, hatswitch.getHeight() - 22);
         
         g.setColor(Color.BLACK);
         g.setBackground(darkGreen);
         g.drawOval(20, 22, circleSize, circleSize);
         
-        g.setColor(Color.blue);
-        
-        //up
-        if(var.joystick.getHatSwitch()[1]){
-            x = upCircleX;
-            y = upCircleY;
-        //down
-        }else if(var.joystick.getHatSwitch()[5]){
-            x = upCircleX;
-            y = upCircleY + circleSize;
-        //left
-        }else if(var.joystick.getHatSwitch()[7]){
-            x = leftCircleX;
-            y = leftCircleY;
-        //right
-        }else if(var.joystick.getHatSwitch()[3]){
-            x = leftCircleX + circleSize;
-            y = leftCircleY;
-        //up left
-        }else if(var.joystick.getHatSwitch()[8]){
-            x = upCircleX - betweenX;
-            y = upCircleY + betweenY;
-        //up right
-        }else if(var.joystick.getHatSwitch()[2]){
-            x = upCircleX + betweenX;
-            y = upCircleY + betweenY;
-        //down left
-        }else if(var.joystick.getHatSwitch()[6]){
-            x = upCircleX - betweenX;
-            y = upCircleY + circleSize - betweenY;
-        //down right
-        }else if(var.joystick.getHatSwitch()[4]){
-            x = upCircleX + betweenX;
-            y = upCircleY + circleSize - betweenY;
+        if(!var.joystick.getHatSwitch()[0] && var.joystick.isConnected()){
+            g.setColor(Color.blue);
+
+            //up
+            if(var.joystick.getHatSwitch()[1]){
+                x = upCircleX;
+                y = upCircleY;
+            //down
+            }else if(var.joystick.getHatSwitch()[5]){
+                x = upCircleX;
+                y = upCircleY + circleSize;
+            //left
+            }else if(var.joystick.getHatSwitch()[7]){
+                x = leftCircleX;
+                y = leftCircleY;
+            //right
+            }else if(var.joystick.getHatSwitch()[3]){
+                x = leftCircleX + circleSize;
+                y = leftCircleY;
+            //up left
+            }else if(var.joystick.getHatSwitch()[8]){
+                x = upCircleX - betweenX;
+                y = upCircleY + betweenY;
+            //up right
+            }else if(var.joystick.getHatSwitch()[2]){
+                x = upCircleX + betweenX;
+                y = upCircleY + betweenY;
+            //down left
+            }else if(var.joystick.getHatSwitch()[6]){
+                x = upCircleX - betweenX;
+                y = upCircleY + circleSize - betweenY;
+            //down right
+            }else if(var.joystick.getHatSwitch()[4]){
+                x = upCircleX + betweenX;
+                y = upCircleY + circleSize - betweenY;
+            }
+
+            g.fillOval(x, y, smallCircleSize, smallCircleSize);
         }
-        
-        g.fillOval(x, y, smallCircleSize, smallCircleSize);
     }
     
     public static void redraw(){

@@ -8,6 +8,7 @@ import robot.Arduino;
 import robot.Joystick;
 import robot.Log;
 import robot.Motor;
+import robot.Servo;
 
 public class var {
     //log
@@ -16,6 +17,7 @@ public class var {
     public static Joystick joystick;
     public static Arduino arduino;
     public static Motor motorL, motorR, motorE;
+    public static Servo servoClaw, servoArm;
     
     //xyz
     public static float x = 0, y = 0, z = 0;
