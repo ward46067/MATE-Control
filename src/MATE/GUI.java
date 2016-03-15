@@ -318,7 +318,7 @@ public class GUI {
         int x = 0;
         int y = 0;
         
-        g.clearRect(25, 15, hatswitch.getWidth() - 10, hatswitch.getHeight() - 22);
+        g.clearRect(15, 15, hatswitch.getWidth() - 10, hatswitch.getHeight() - 22);
         
         g.setColor(Color.BLACK);
         g.setBackground(darkGreen);

@@ -16,6 +16,15 @@ public class loops {
                     if(var.joystick.getHatSwitch()[7]){ //left
                         deg--;
                     }
+                    
+                    if(deg < 0){
+                        deg = 0;
+                    } 
+
+                    if(deg > 180){
+                        deg = 180;
+                    }
+                    
                     var.servoClaw.setValue(deg);
                     
                     
@@ -42,6 +51,15 @@ public class loops {
                     if(var.joystick.getHatSwitch()[5]){//down
                         deg--;
                     }
+                    
+                    if(deg < 0){
+                        deg = 0;
+                    } 
+
+                    if(deg > 180){
+                        deg = 180;
+                    }
+                    
                     var.servoArm.setValue(deg);
                     
                     
