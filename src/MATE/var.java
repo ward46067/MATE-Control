@@ -1,10 +1,7 @@
 package MATE;
 
-import com.github.sarxos.webcam.Webcam;
-import com.github.sarxos.webcam.WebcamPanel;
-import java.awt.Color;
-import java.awt.Graphics2D;
 import robot.Arduino;
+import robot.Camera;
 import robot.Joystick;
 import robot.Log;
 import robot.Motor;
@@ -18,6 +15,7 @@ public class var {
     public static Arduino arduino;
     public static Motor motorL, motorR, motorE;
     public static Servo servoClaw, servoArm;
+    public static Camera cam1, cam2;
     
     //xyz
     public static float x = 0, y = 0, z = 0;
@@ -68,39 +66,4 @@ public class var {
     
     //sensitivity
     public static double minSensitivity = 0.1;
-    
-    //xml colors 
-    public static int[][][] colorPalette = new int[4][5][3];
-
-    //colors
-    public static Color colorText;
-
-    public static Color colorBackground;
-
-    public static Color colorBarInfo;
-    public static Color colorBarBackground;
-
-    public static Color colorTitleBackground;
-
-    public static Color colorMotorBackground;
-    public static Color colorMotorBackgroundSS;
-
-    public static Color colorDebugBackground;
-    public static Color colorDebugText;
-
-    public static Color colorButton;
-    public static Color colorButtonHover;
-    public static Color colorButtonSelected;
-    
-    public static int stringW(String text, Graphics2D d){
-        return (int) d.getFontMetrics().getStringBounds(text, d).getWidth();
-    }
-    
-    public static int stringH(String text, Graphics2D d){
-        return (int) d.getFontMetrics().getStringBounds(text, d).getHeight();
-    }
-    
-    public static Webcam camera;
-    public static WebcamPanel cameraPanel;
-    
 }

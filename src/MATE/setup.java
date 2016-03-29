@@ -1,6 +1,7 @@
 package MATE;
 
 import robot.Arduino;
+import robot.Camera;
 import robot.Joystick;
 import robot.Motor;
 import robot.Servo;
@@ -15,7 +16,7 @@ public class setup {
         
         //arduino
         var.arduino = new Arduino("Arduino Uno", 115200);
-        //var.arduino.connect();
+        var.arduino.connect();
         
         //motors
         var.motorL = new Motor("Motor Left");
@@ -25,11 +26,14 @@ public class setup {
         //servos
         var.servoClaw = new Servo("Servo Claw");
         var.servoArm = new Servo("Servo Arm");
-
-        //cam.setup();
         
-        //color.colorRead();
-        //color.colorSet();
+        //cameras
+        var.cam1 = new Camera("USB 2.0 PC Cam");
+        var.cam2 = new Camera("USB 2.0 PC Cam");
+        
+        //var.cam1.connect();
+        //var.cam2.connect();
+        
         math.math();
         GUI.GUI();
         

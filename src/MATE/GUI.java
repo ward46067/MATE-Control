@@ -105,7 +105,7 @@ public class GUI {
         cHatSwitch();
         
         //camera
-        camera = new JPanel();
+        camera = new JPanel(new BorderLayout());
     }
     
     private static void ccolor(){
@@ -122,7 +122,8 @@ public class GUI {
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
         
-        //camera.add(var.cameraPanel);
+        //camera.add(var.cam1.getCameraPanel(), BorderLayout.NORTH);
+        //camera.add(var.cam2.getCameraPanel(), BorderLayout.SOUTH);
         
         info.add(infoLeft, FlowLayout.LEFT);
         info.add(infoRight);
