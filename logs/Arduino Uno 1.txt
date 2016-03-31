@@ -1,0 +1,11 @@
+03/31/2016 03:22:04::559 --> Connecting to the Arduino.
+03/31/2016 03:22:04::579 --> Listing port options
+03/31/2016 03:22:04::580 --> COM5 - Serial
+03/31/2016 03:22:04::594 --> Opening the output stream.
+03/31/2016 03:22:04::698 --> Connected.
+03/31/2016 03:22:04::699 --> 
+
+Arduino 
+ Name: Arduino Uno
+ COM Port: COM5
+ Rate: 115200

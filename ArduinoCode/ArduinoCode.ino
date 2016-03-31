@@ -10,8 +10,7 @@ void setup() {
     //s[i].write(0);
   }
   delay(1000); // for ESCs
-  //s[0].writeMicroseconds(1460);
-  //s[1].writeMicroseconds(1460);
+  
   Serial.begin(115200);
 }
 
@@ -21,18 +20,14 @@ void loop() {
     if(buffer[0] == 'T'){
 
       //ESCs
-      //s[0].writeMicroseconds(i2ms((hex2dec(buffer[0]) * 16) + hex2dec(buffer[1])));
-      //s[1].writeMicroseconds(i2ms((hex2dec(buffer[2]) * 16) + hex2dec(buffer[3])));
-      float s1d = ((hex2dec(buffer[1]) * 16) + hex2dec(buffer[2]))/200;
-      float s2d = ((hex2dec(buffer[3]) * 16) + hex2dec(buffer[4]))/200;
+      s[0].write(((hex2dec(buffer[1]) * 16) + hex2dec(buffer[2])) * 0.8); //motor left
+      s[1].write(((hex2dec(buffer[3]) * 16) + hex2dec(buffer[4])) * 0.8); //motor right
       
-      s[0].write(s1d*160);
-      s[1].write(s2d*160);
+      
       for(int i = 2; i < 12; i++){
         int b = i * 2;
         b = b+1;
         s[i].write((hex2dec(buffer[b]) * 16) + hex2dec(buffer[b+1]));
-        //s[i].writeMicroseconds(d2ms((hex2dec(buffer[b]) * 16) + hex2dec(buffer[b+1])));
       }
     }
   }

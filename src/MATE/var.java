@@ -50,14 +50,6 @@ public class var {
         return joystick.getButton(0);
     }
     
-    public static String output(){
-        return arduino.getOutput(hexOutput());
-    }
-    
-    public static String hexOutput(){
-        return "" + motorL.getValueHex() + motorR.getValueHex() + motorE.getValueHex();
-    }
-    
     //mode 
     int defaultMode = 1;
     

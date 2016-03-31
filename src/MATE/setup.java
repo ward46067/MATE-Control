@@ -39,6 +39,6 @@ public class setup {
         
         var.log.write("Created GUI.");
         
-        loops.main();
+        loop.main();
     }
 }
