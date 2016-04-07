@@ -1,15 +1,19 @@
-03/31/2016 03:22:04::550 --> Connecting to the joystick.
-03/31/2016 03:22:04::550 --> Found a controller called Razer DeathAdder Chroma.
-03/31/2016 03:22:04::550 --> Found a controller called HID Keyboard Device.
-03/31/2016 03:22:04::551 --> Found a controller called Razer DeathAdder Chroma.
-03/31/2016 03:22:04::551 --> Found a controller called HID Keyboard Device.
-03/31/2016 03:22:04::551 --> Found a controller called Standard PS/2 Keyboard.
-03/31/2016 03:22:04::551 --> Found a controller called Dell Touchpad.
-03/31/2016 03:22:04::552 --> Found a controller called PS/2 Compatible Mouse.
-03/31/2016 03:22:04::553 --> Found a controller called HID-compliant mouse.
-03/31/2016 03:22:04::554 --> Found a controller called Logitech Extreme 3D.
-03/31/2016 03:22:04::554 --> Found the joystick Logitech Extreme 3D.
-03/31/2016 03:22:04::554 --> Found the joystick.
-03/31/2016 03:22:04::555 --> Beginning poll loop.
-03/31/2016 03:22:04::555 --> Succesfully created poll loop.
-03/31/2016 03:22:35::654 --> ERROR: POLL: Disconnected from Logitech Extreme 3D.
+04/07/2016 12:29:27::634 --> Connecting to the joystick.
+04/07/2016 12:29:27::635 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::635 --> Found a controller called HID Keyboard Device.
+04/07/2016 12:29:27::635 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::636 --> Found a controller called HID Keyboard Device.
+04/07/2016 12:29:27::636 --> Found a controller called Standard PS/2 Keyboard.
+04/07/2016 12:29:27::636 --> Found a controller called Dell Touchpad.
+04/07/2016 12:29:27::637 --> Found a controller called PS/2 Compatible Mouse.
+04/07/2016 12:29:27::638 --> Found a controller called HID-compliant mouse.
+04/07/2016 12:29:27::639 --> Found a controller called Touchscreen.
+04/07/2016 12:29:27::639 --> Found a controller called Touchscreen.
+04/07/2016 12:29:27::639 --> Found a controller called Airplane Mode Switch.
+04/07/2016 12:29:27::640 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::640 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::640 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::640 --> Found a controller called Razer DeathAdder Chroma.
+04/07/2016 12:29:27::641 --> Found a controller called HIDI2C Device.
+04/07/2016 12:29:27::641 --> Found a controller called Programmable Hotkeys.
+04/07/2016 12:29:27::642 --> ERROR: Couldn't find the joystick Logitech Extreme 3D.

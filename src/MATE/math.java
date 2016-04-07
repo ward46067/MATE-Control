@@ -68,8 +68,9 @@ public class math{
             mrz = var.z;
         }
         
-        var.motorL.setValue(mlx + mlz);
-        var.motorR.setValue(mrx + mrz);
+        var.motorL.setValueAxisValue(mlx + mlz);
+        var.motorR.setValueAxisValue(mrx + mrz);
+        
         
         if(var.elevationButton()){
             var.y = var.rotation() * var.sensitivity();
@@ -77,7 +78,7 @@ public class math{
             var.y = 0;
         }
         
-        var.motorE.setValue(var.y);
+        var.motorE.setValueAxisValue(var.y);
         
         //servos
         if(var.joystick.getHatSwitch()[3]){ //right

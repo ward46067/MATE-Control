@@ -374,15 +374,15 @@ public class GUI {
         
         colorBar(rotb, var.joystick.getRotation());
         sensb.setValue((int) (var.sensitivity()*100));
-        colorBar(elevb, var.motorE.getValue());
+        colorBar(elevb, (float) ((var.motorE.getValue()/100.00) - 1));
         
         //left motor
-        mlSpeed.setText("Speed: " + var.motorL.getValueInt());
-        motorlb.setValue((var.motorL.getValueInt()/2) + 50);
+        mlSpeed.setText("Speed: " + var.motorL.getValue());
+        motorlb.setValue(var.motorL.getValue()/2);
         
         //right motor
-        mrSpeed.setText("Speed: " + var.motorR.getValueInt());
-        motorrb.setValue((var.motorR.getValueInt()/2) + 50);
+        mrSpeed.setText("Speed: " + var.motorR.getValue());
+        motorrb.setValue(var.motorR.getValue()/2);
         
         
     }

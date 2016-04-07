@@ -11,13 +11,7 @@ public class loop {
                     math.math();
                     GUI.redraw();
                     
-                    var.arduino.write(
-                              var.motorL.getValueHex()
-                            + var.motorR.getValueHex()
-                            + var.motorE.getValueHex()
-                            + var.servoClaw.getValueHex()
-                            + var.servoArm.getValueHex()
-                    );
+                    //System.out.println(var.motorE.getValueAsAxis());
                     
                     try {
                         Thread.sleep(10);

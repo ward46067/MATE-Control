@@ -1,4 +1,3 @@
-03/31/2016 03:22:04::346 --> Starting.
-03/31/2016 03:22:04::347 --> Connecting to devices.
-03/31/2016 03:22:04::752 --> Creating GUI
-03/31/2016 03:22:04::928 --> Created GUI.
+04/07/2016 12:29:27::481 --> Starting.
+04/07/2016 12:29:27::481 --> Connecting to devices.
+04/07/2016 12:29:29::616 --> ERROR: Not all required devices found, exiting.
