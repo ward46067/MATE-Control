@@ -1,0 +1,3 @@
+04/09/2016 01:21:21::103 --> Connecting to the Arduino.
+04/09/2016 01:21:21::150 --> Listing port options
+04/09/2016 01:21:21::150 --> ERROR: Couldn't find an Arduino.

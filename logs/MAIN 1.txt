@@ -1,3 +1,0 @@
-04/07/2016 12:29:27::481 --> Starting.
-04/07/2016 12:29:27::481 --> Connecting to devices.
-04/07/2016 12:29:29::616 --> ERROR: Not all required devices found, exiting.

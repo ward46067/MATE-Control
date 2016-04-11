@@ -82,19 +82,19 @@ public class math{
         
         //servos
         if(var.joystick.getHatSwitch()[3]){ //right
-            var.servoClaw.addDegree(3);
+            var.servoClaw.addDegree(2);
 
         }
         if(var.joystick.getHatSwitch()[7]){ //left
-            var.servoClaw.subDegree(3);
+            var.servoClaw.subDegree(2);
         }
         
         if(var.joystick.getHatSwitch()[1]){ //up
-            var.servoArm.addDegree(3);
+            var.servoArm.addDegree(2);
 
         }
         if(var.joystick.getHatSwitch()[5]){//down
-            var.servoArm.subDegree(3);
+            var.servoArm.subDegree(2);
         }
         
         //System.out.println(var.arduino.getOutput());

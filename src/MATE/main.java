@@ -28,8 +28,8 @@ public class main{
         var.motorR = new Motor("Motor Right", 3, var.arduino);
         var.motorE = new Motor("Motor Elevation", 4, var.arduino);
         
-        var.motorL.setReverse(true);
-        var.motorR.setReverse(true);
+        //var.motorL.setReverse(true);
+        //var.motorR.setReverse(true);
         var.motorE.setReverse(true);
         
         //servos
@@ -48,13 +48,10 @@ public class main{
             System.exit(1);
         }
         
-        math.math();
-        GUI.GUI();
+        loop.main();
         
         var.arduino.startWrite();
         
-        var.log.write("Created GUI.");
-        
-        loop.main();
+        var.log.write("Finished.");
    }
 }
