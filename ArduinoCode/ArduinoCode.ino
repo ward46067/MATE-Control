@@ -31,6 +31,8 @@ void loop() {
       }
     }
   }
+  //s[3].write(160);
+  //s[4].write(160);
 }
 
 int i2ms(int d){

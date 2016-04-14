@@ -1,5 +1,6 @@
 package MATE;
 
+import com.ward.Console;
 import robot.Arduino;
 import robot.Camera;
 import robot.Joystick;
@@ -16,9 +17,11 @@ public class var {
     public static Motor motorL, motorR, motorE;
     public static Servo servoClaw, servoArm;
     public static Camera cam1, cam2;
+    public static Console debugCon;
     
     //xyz
     public static float x = 0, y = 0, z = 0;
+    public static Camera cam3;
     
     //sensitivity
     public static float sensitivity(){

@@ -1,3 +1,9 @@
-04/09/2016 01:21:19::115 --> Starting.
-04/09/2016 01:21:19::115 --> Connecting to devices.
-04/09/2016 01:21:22::359 --> ERROR: Not all required devices found, exiting.
+04/14/2016 11:21:46::34 --> Connecting to devices.
+04/14/2016 11:21:46::103 --> Connecting to Joystick.
+04/14/2016 11:21:47::961 --> Connected to Joystick.
+04/14/2016 11:21:48::1 --> Connecting to Arduino.
+04/14/2016 11:21:48::579 --> Connected to Arduino.
+04/14/2016 11:21:48::674 --> Connecting to Cam1.
+04/14/2016 11:21:48::748 --> Connecting to Cam2.
+04/14/2016 11:21:48::824 --> Connecting to Cam3.
+04/14/2016 11:21:48::866 --> ERROR: Not all required devices found, exiting.

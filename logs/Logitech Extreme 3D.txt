@@ -1,19 +1,19 @@
-04/09/2016 01:21:19::532 --> Connecting to the joystick.
-04/09/2016 01:21:19::532 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called HID Keyboard Device.
-04/09/2016 01:21:19::547 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called HID Keyboard Device.
-04/09/2016 01:21:19::547 --> Found a controller called Standard PS/2 Keyboard.
-04/09/2016 01:21:19::547 --> Found a controller called Dell Touchpad.
-04/09/2016 01:21:19::547 --> Found a controller called PS/2 Compatible Mouse.
-04/09/2016 01:21:19::547 --> Found a controller called HID-compliant mouse.
-04/09/2016 01:21:19::547 --> Found a controller called Touchscreen.
-04/09/2016 01:21:19::547 --> Found a controller called Touchscreen.
-04/09/2016 01:21:19::547 --> Found a controller called Airplane Mode Switch.
-04/09/2016 01:21:19::547 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called Razer DeathAdder Chroma.
-04/09/2016 01:21:19::547 --> Found a controller called HIDI2C Device.
-04/09/2016 01:21:19::563 --> Found a controller called Programmable Hotkeys.
-04/09/2016 01:21:19::563 --> ERROR: Couldn't find the joystick Logitech Extreme 3D.
+04/14/2016 11:21:46::631 --> Connecting to the joystick.
+04/14/2016 11:21:46::632 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::632 --> Found a controller called HID Keyboard Device.
+04/14/2016 11:21:46::633 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::634 --> Found a controller called HID Keyboard Device.
+04/14/2016 11:21:46::635 --> Found a controller called Standard PS/2 Keyboard.
+04/14/2016 11:21:46::635 --> Found a controller called Dell Touchpad.
+04/14/2016 11:21:46::636 --> Found a controller called PS/2 Compatible Mouse.
+04/14/2016 11:21:46::639 --> Found a controller called HID-compliant mouse.
+04/14/2016 11:21:46::639 --> Found a controller called Touchscreen.
+04/14/2016 11:21:46::640 --> Found a controller called Touchscreen.
+04/14/2016 11:21:46::641 --> Found a controller called Airplane Mode Switch.
+04/14/2016 11:21:46::641 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::642 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::642 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::643 --> Found a controller called Razer DeathAdder Chroma.
+04/14/2016 11:21:46::644 --> Found a controller called HIDI2C Device.
+04/14/2016 11:21:46::644 --> Found a controller called Programmable Hotkeys.
+04/14/2016 11:21:46::645 --> ERROR: Couldn't find the joystick Logitech Extreme 3D.

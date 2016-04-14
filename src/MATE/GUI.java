@@ -1,16 +1,8 @@
 package MATE;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics2D;
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
 import static javax.swing.JFrame.*;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
@@ -49,7 +41,9 @@ public class GUI {
     private static JLabel senstxt,
             rottxt, 
             mrSpeed,
-            mlSpeed;
+            mlSpeed,
+            datetime;
+            
     private static Color darkGreen;
     
     public static void GUI(){ 
@@ -106,6 +100,7 @@ public class GUI {
         
         //camera
         camera = new JPanel(new BorderLayout());
+        datetime = new JLabel(var.log.dateTime());
     }
     
     private static void ccolor(){
@@ -122,10 +117,14 @@ public class GUI {
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
         
-        //camera.add(var.cam1.getCameraPanel(), BorderLayout.NORTH);
-        //camera.add(var.cam2.getCameraPanel(), BorderLayout.SOUTH);
+        camera.add(var.cam1.getCameraPanel(), BorderLayout.NORTH);
+        camera.add(var.cam2.getCameraPanel(), BorderLayout.CENTER);
+        camera.add(var.cam3.getCameraPanel(), BorderLayout.SOUTH);
         
         info.add(infoLeft, FlowLayout.LEFT);
+        
+        info.add(datetime);
+        
         info.add(infoRight);
         
         infoLeft.add(leftTop, BorderLayout.NORTH);
@@ -384,7 +383,7 @@ public class GUI {
         mrSpeed.setText("Speed: " + var.motorR.getValue());
         motorrb.setValue(var.motorR.getValue()/2);
         
-        
+        datetime.setText(var.log.dateTime());
     }
     
     private static Border titledBorder(String n){
