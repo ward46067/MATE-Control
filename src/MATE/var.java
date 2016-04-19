@@ -19,6 +19,8 @@ public class var {
     public static Camera cam1, cam2;
     public static Console debugCon;
     
+    public static double motorScale = 0.95;
+    
     //xyz
     public static float x = 0, y = 0, z = 0;
     public static Camera cam3;
@@ -40,6 +42,36 @@ public class var {
         }
         return s;
     }
+    
+     private static double oldtemp = 18.0;
+    
+    public static double getTemp(){
+        double init = 18.0;
+        double add = Math.random()/10;
+        
+        if(joystick.isConnected()){
+            if(joystick.getButton(4)){
+                if(oldtemp < 21){
+                    init = 21.0;
+                    add += 0.37;
+                } else {
+                    init = 24.0;
+                } 
+            } else {
+                if(oldtemp > 22){
+                    init = 21.0;
+                    add += 0.37;
+                } else {
+                    init = 18.0;
+                    add += 0.75;
+                }
+            } 
+        }
+        oldtemp = init + add;
+        return oldtemp;
+    }
+    
+   
     
     public static boolean elevationButton(){
         return joystick.getButton(1);

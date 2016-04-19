@@ -44,7 +44,7 @@ public class math{
         }
         
         if(var.z == 0){
-            mlx = 0;
+            mlz = 0;
             mrz = 0;
         }
         
@@ -71,33 +71,44 @@ public class math{
         var.motorL.setValueAxisValue(mlx + mlz);
         var.motorR.setValueAxisValue(mrx + mrz);
         
-        
+        /*
         if(var.elevationButton()){
             var.y = var.rotation() * var.sensitivity();
         } else {
             var.y = 0;
         }
+        */
+        if(var.joystick.getButton(2)){
+            var.motorE.setValue(200);
+        } else if(var.joystick.getButton(3)){
+            var.motorE.setValue(0);
+        } else {
+            var.motorE.setValue(100);
+        }
         
-        var.motorE.setValueAxisValue(var.y);
+        //var.motorE.setValueAxisValue(var.y);
         
         //servos
         if(var.joystick.getHatSwitch()[3]){ //right
-            var.servoClaw.addDegree(2);
+            var.servoClaw.addDegree(1);
 
         }
         if(var.joystick.getHatSwitch()[7]){ //left
-            var.servoClaw.subDegree(2);
+            var.servoClaw.subDegree(1);
         }
         
         if(var.joystick.getHatSwitch()[1]){ //up
-            var.servoArm.addDegree(2);
+            var.servoArm.addDegree(1);
 
         }
         if(var.joystick.getHatSwitch()[5]){//down
-            var.servoArm.subDegree(2);
+            var.servoArm.subDegree(1);
         }
         
         //System.out.println(var.arduino.getOutput());
+        
+        var.motorL.scaleValue(var.motorScale);
+        var.motorR.scaleValue(var.motorScale);
         
     } 
 }

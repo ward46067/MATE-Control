@@ -21,13 +21,13 @@ public class main{
         //joystick
         var.joystick = new Joystick("Logitech Extreme 3D");
         var.log.write("Connecting to Joystick.");
-        //var.joystick.connect();
+        var.joystick.connect();
         var.log.write("Connected to Joystick.");
         
         //arduino
         var.arduino = new Arduino("Arduino Uno", 115200);
         var.log.write("Connecting to Arduino.");
-        //var.arduino.connect();
+        var.arduino.connect();
         var.log.write("Connected to Arduino.");
         
         //motors
@@ -37,33 +37,38 @@ public class main{
         
         //var.motorL.setReverse(true);
         //var.motorR.setReverse(true);
-        var.motorE.setReverse(true);
+        //var.motorE.setReverse(true);
         
         //servos
         var.servoClaw = new Servo("Servo Claw", 5, var.arduino);
         var.servoArm = new Servo("Servo Arm", 6, var.arduino);
         
-        //cameras
+        //cameras 
+        /*
         var.cam1 = new Camera("USB 2.0 PC Cam");
         var.cam2 = new Camera("USB 2.0 PC Cam");
         var.cam3 = new Camera("USB 2.0 PC Cam");
         
         var.log.write("Connecting to Cam1.");
-        var.cam1.connect();
+        //var.cam1.connect();
         var.log.write("Connecting to Cam2.");
-        var.cam2.connect();
+        //var.cam2.connect();
         var.log.write("Connecting to Cam3.");
-        var.cam3.connect();
+        //var.cam3.connect();
         
-        var.cam1.displayFPS(true);
-        var.cam2.displayFPS(true);
-        var.cam3.displayFPS(true);
+        //var.cam1.displayFPS(true);
+        //var.cam2.displayFPS(true);
+        //var.cam3.displayFPS(true);
+        */
         
         if(!var.joystick.isConnected() || !var.arduino.isConnected()){
             var.log.crtError("Not all required devices found, exiting.");
             //System.exit(1);
         }
         GUI.GUI();
+        
+        
+        GUI.beginTemp();
         
         loop.main();
         

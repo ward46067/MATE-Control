@@ -1,6 +1,7 @@
 #include <Servo.h>
 
 Servo s[12];
+int tempSens = 0;
 
 char buffer[25];
 
@@ -33,10 +34,15 @@ void loop() {
   }
   //s[3].write(160);
   //s[4].write(160);
+
+  //get temp
+  float volt = getVoltage(tempSens);
+  float tempC = (volt - 0.5) * 100.0;
+  Serial.println(tempC);
 }
 
-int i2ms(int d){
-  return  1060 + (4*d);
+float getVoltage(int p){
+  return(analogRead(p) * 0.004882814);
 }
 
 int hex2dec(char c) { //c is the character that was buffered

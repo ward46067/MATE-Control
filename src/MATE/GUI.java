@@ -1,6 +1,8 @@
 package MATE;
 
 import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import static javax.swing.JFrame.*;
 import javax.swing.border.Border;
@@ -42,7 +44,8 @@ public class GUI {
             rottxt, 
             mrSpeed,
             mlSpeed,
-            datetime;
+            datetime,
+            temp;
             
     private static Color darkGreen;
     
@@ -101,6 +104,7 @@ public class GUI {
         //camera
         camera = new JPanel(new BorderLayout());
         datetime = new JLabel(var.log.dateTime());
+        temp = new JLabel();
     }
     
     private static void ccolor(){
@@ -116,14 +120,15 @@ public class GUI {
         
         data.add(info, FlowLayout.LEFT);
         data.add(camera);
+        data.add(temp);
         
-        camera.add(var.cam1.getCameraPanel(), BorderLayout.NORTH);
-        camera.add(var.cam2.getCameraPanel(), BorderLayout.CENTER);
-        camera.add(var.cam3.getCameraPanel(), BorderLayout.SOUTH);
+        //camera.add(var.cam1.getCameraPanel(), BorderLayout.NORTH);
+        //camera.add(var.cam2.getCameraPanel(), BorderLayout.CENTER);
+        //camera.add(var.cam3.getCameraPanel(), BorderLayout.SOUTH);
         
         info.add(infoLeft, FlowLayout.LEFT);
         
-        info.add(datetime);
+        //info.add(datetime);
         
         info.add(infoRight);
         
@@ -373,7 +378,7 @@ public class GUI {
         
         colorBar(rotb, var.joystick.getRotation());
         sensb.setValue((int) (var.sensitivity()*100));
-        colorBar(elevb, (float) ((var.motorE.getValue()/100.00) - 1));
+        colorBarInt(elevb, var.motorE.getValue()/2);
         
         //left motor
         mlSpeed.setText("Speed: " + var.motorL.getValue());
@@ -383,7 +388,10 @@ public class GUI {
         mrSpeed.setText("Speed: " + var.motorR.getValue());
         motorrb.setValue(var.motorR.getValue()/2);
         
-        datetime.setText(var.log.dateTime());
+        //motorrb.setMaximum(var.motorScale);
+        
+        
+        //datetime.setText(var.log.dateTime());
     }
     
     private static Border titledBorder(String n){
@@ -400,5 +408,34 @@ public class GUI {
         bar.setValue((int) ((num + 1)*50));
         bar.setToolTipText("" + num);
         
+    }
+    
+    private static void colorBarInt(JProgressBar bar, int num){
+        if(num >= 50){
+            bar.setForeground(darkGreen);
+        } else {
+            bar.setForeground(Color.red);
+        }
+        
+        bar.setValue(num);
+        bar.setToolTipText("" + num);
+        
+    }
+    
+    
+    public static void beginTemp(){
+        new Thread(){
+            public void run(){
+                while(true){
+                    
+                    temp.setText("Temperature: " + String.valueOf(var.getTemp()).substring(0, 5) + " C");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        }.start();
     }
 }

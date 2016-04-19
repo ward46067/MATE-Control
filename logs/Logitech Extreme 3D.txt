@@ -1,19 +1,12 @@
-04/14/2016 11:21:46::631 --> Connecting to the joystick.
-04/14/2016 11:21:46::632 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::632 --> Found a controller called HID Keyboard Device.
-04/14/2016 11:21:46::633 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::634 --> Found a controller called HID Keyboard Device.
-04/14/2016 11:21:46::635 --> Found a controller called Standard PS/2 Keyboard.
-04/14/2016 11:21:46::635 --> Found a controller called Dell Touchpad.
-04/14/2016 11:21:46::636 --> Found a controller called PS/2 Compatible Mouse.
-04/14/2016 11:21:46::639 --> Found a controller called HID-compliant mouse.
-04/14/2016 11:21:46::639 --> Found a controller called Touchscreen.
-04/14/2016 11:21:46::640 --> Found a controller called Touchscreen.
-04/14/2016 11:21:46::641 --> Found a controller called Airplane Mode Switch.
-04/14/2016 11:21:46::641 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::642 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::642 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::643 --> Found a controller called Razer DeathAdder Chroma.
-04/14/2016 11:21:46::644 --> Found a controller called HIDI2C Device.
-04/14/2016 11:21:46::644 --> Found a controller called Programmable Hotkeys.
-04/14/2016 11:21:46::645 --> ERROR: Couldn't find the joystick Logitech Extreme 3D.
+04/17/2016 12:43:48::710 --> Connecting to the joystick.
+04/17/2016 12:43:48::711 --> Found a controller called HID Keyboard Device.
+04/17/2016 12:43:48::712 --> Found a controller called Standard PS/2 Keyboard.
+04/17/2016 12:43:48::712 --> Found a controller called Dell Touchpad.
+04/17/2016 12:43:48::713 --> Found a controller called PS/2 Compatible Mouse.
+04/17/2016 12:43:48::713 --> Found a controller called HID-compliant mouse.
+04/17/2016 12:43:48::714 --> Found a controller called Logitech Extreme 3D.
+04/17/2016 12:43:48::715 --> Found the joystick Logitech Extreme 3D.
+04/17/2016 12:43:48::717 --> Found the joystick.
+04/17/2016 12:43:48::717 --> Beginning poll loop.
+04/17/2016 12:43:48::719 --> Succesfully created poll loop.
+04/17/2016 12:46:52::32 --> ERROR: POLL: Disconnected from Logitech Extreme 3D.
