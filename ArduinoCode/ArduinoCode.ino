@@ -1,6 +1,7 @@
 #include <Servo.h>
 
 Servo s[12];
+int v[12];
 int tempSens = 0;
 
 char buffer[25];
@@ -8,7 +9,6 @@ char buffer[25];
 void setup() {
   for(int i = 0; i < 12; i++){
     s[i].attach(i+2);
-    //s[i].write(0);
   }
   delay(1000); // for ESCs
   
@@ -19,17 +19,24 @@ void loop() {
   while(Serial.available() == 25){
     Serial.readBytes(buffer, Serial.available());
     if(buffer[0] == 'T'){
-
-      //ESCs
-      s[0].write(((hex2dec(buffer[1]) * 16) + hex2dec(buffer[2])) * 0.8); //motor left
-      s[1].write(((hex2dec(buffer[3]) * 16) + hex2dec(buffer[4])) * 0.8); //motor right
-      
-      
-      for(int i = 2; i < 12; i++){
+      for(int i = 0; i < 12; i++){
         int b = i * 2;
         b = b+1;
-        s[i].write((hex2dec(buffer[b]) * 16) + hex2dec(buffer[b+1]));
+        v[i] = (hex2dec(buffer[b]) * 16) + hex2dec(buffer[b+1]);
       }
+      
+      //ESCs
+      s[0].write(v[0] * 0.8); //motor left
+      s[1].write(v[1] * 0.8); //motor right
+
+      //motors
+      s[2].write(v[2]);
+
+      //servos
+      s[3].write(v[3]);
+      s[4].write(v[4]);
+
+      writeSensors();
     }
   }
   //s[3].write(160);
@@ -38,7 +45,19 @@ void loop() {
   //get temp
   float volt = getVoltage(tempSens);
   float tempC = (volt - 0.5) * 100.0;
-  Serial.println(tempC);
+  //Serial.println(tempC);
+}
+
+void writeSensors(){
+  String msg = "`";
+
+  //msg = msg + sensLine("temperature", (getVoltage(tempSens) - 0.5) * 100.0);  
+  msg = msg + sensLine("temperature", 1.00);
+  Serial.print(msg);
+}
+
+String sensLine(String n, double v){
+  return "$" + n + "/" + v;
 }
 
 float getVoltage(int p){
